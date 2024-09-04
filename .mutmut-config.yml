@@ -1,0 +1,6 @@
+paths_to_mutate:
+  - tests  # Indica que o mutmut deve considerar todo o diretório atual
+
+# Exclui arquivos ou diretórios específicos
+paths_to_exclude:
+  - Lib/site-packages/pony/orm/

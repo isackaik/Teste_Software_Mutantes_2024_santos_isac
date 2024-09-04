@@ -1,0 +1,1662 @@
+<html><body><h1>C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py</h1>Killed 0 out of 151 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 13226</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -7,7 +7,7 @@
+     """Classe referente ao Cartão Nacional de Saúde (CNS)."""
+ 
+     def __init__(self):
+-        self.digits = list(range(10))
++        self.digits = list(range(11))
+         self.first_digit = [1, 2, 7, 8, 9]
+ 
+     def validate(self, doc: str = '') -> bool:
+</pre><h3>Mutant 13227</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -7,7 +7,7 @@
+     """Classe referente ao Cartão Nacional de Saúde (CNS)."""
+ 
+     def __init__(self):
+-        self.digits = list(range(10))
++        self.digits = None
+         self.first_digit = [1, 2, 7, 8, 9]
+ 
+     def validate(self, doc: str = '') -> bool:
+</pre><h3>Mutant 13228</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -8,7 +8,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.first_digit = [1, 2, 7, 8, 9]
++        self.first_digit = [2, 2, 7, 8, 9]
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNS."""
+</pre><h3>Mutant 13229</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -8,7 +8,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.first_digit = [1, 2, 7, 8, 9]
++        self.first_digit = [1, 3, 7, 8, 9]
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNS."""
+</pre><h3>Mutant 13230</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -8,7 +8,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.first_digit = [1, 2, 7, 8, 9]
++        self.first_digit = [1, 2, 8, 8, 9]
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNS."""
+</pre><h3>Mutant 13231</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -8,7 +8,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.first_digit = [1, 2, 7, 8, 9]
++        self.first_digit = [1, 2, 7, 9, 9]
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNS."""
+</pre><h3>Mutant 13232</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -8,7 +8,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.first_digit = [1, 2, 7, 8, 9]
++        self.first_digit = [1, 2, 7, 8, 10]
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNS."""
+</pre><h3>Mutant 13233</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -8,7 +8,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.first_digit = [1, 2, 7, 8, 9]
++        self.first_digit = None
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNS."""
+</pre><h3>Mutant 13234</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -10,7 +10,7 @@
+         self.digits = list(range(10))
+         self.first_digit = [1, 2, 7, 8, 9]
+ 
+-    def validate(self, doc: str = '') -> bool:
++    def validate(self, doc: str = 'XXXX') -> bool:
+         """Validar CNS."""
+         if not self._validate_input(doc, [' ']):
+             return False
+</pre><h3>Mutant 13235</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -12,7 +12,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNS."""
+-        if not self._validate_input(doc, [' ']):
++        if  self._validate_input(doc, [' ']):
+             return False
+ 
+         doc = list(self._only_digits(doc))
+</pre><h3>Mutant 13236</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -12,7 +12,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNS."""
+-        if not self._validate_input(doc, [' ']):
++        if not self._validate_input(doc, ['XX XX']):
+             return False
+ 
+         doc = list(self._only_digits(doc))
+</pre><h3>Mutant 13237</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -13,7 +13,7 @@
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNS."""
+         if not self._validate_input(doc, [' ']):
+-            return False
++            return True
+ 
+         doc = list(self._only_digits(doc))
+ 
+</pre><h3>Mutant 13238</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -15,7 +15,7 @@
+         if not self._validate_input(doc, [' ']):
+             return False
+ 
+-        doc = list(self._only_digits(doc))
++        doc = None
+ 
+         if len(doc) != 15 or int(doc[0]) not in self.first_digit:
+             return False
+</pre><h3>Mutant 13239</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -17,7 +17,7 @@
+ 
+         doc = list(self._only_digits(doc))
+ 
+-        if len(doc) != 15 or int(doc[0]) not in self.first_digit:
++        if len(doc) == 15 or int(doc[0]) not in self.first_digit:
+             return False
+ 
+         return self._check_cns_valid(doc)
+</pre><h3>Mutant 13240</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -17,7 +17,7 @@
+ 
+         doc = list(self._only_digits(doc))
+ 
+-        if len(doc) != 15 or int(doc[0]) not in self.first_digit:
++        if len(doc) != 16 or int(doc[0]) not in self.first_digit:
+             return False
+ 
+         return self._check_cns_valid(doc)
+</pre><h3>Mutant 13241</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -17,7 +17,7 @@
+ 
+         doc = list(self._only_digits(doc))
+ 
+-        if len(doc) != 15 or int(doc[0]) not in self.first_digit:
++        if len(doc) != 15 or int(doc[1]) not in self.first_digit:
+             return False
+ 
+         return self._check_cns_valid(doc)
+</pre><h3>Mutant 13242</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -17,7 +17,7 @@
+ 
+         doc = list(self._only_digits(doc))
+ 
+-        if len(doc) != 15 or int(doc[0]) not in self.first_digit:
++        if len(doc) != 15 or int(doc[0])  in self.first_digit:
+             return False
+ 
+         return self._check_cns_valid(doc)
+</pre><h3>Mutant 13243</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -17,7 +17,7 @@
+ 
+         doc = list(self._only_digits(doc))
+ 
+-        if len(doc) != 15 or int(doc[0]) not in self.first_digit:
++        if len(doc) != 15 and int(doc[0]) not in self.first_digit:
+             return False
+ 
+         return self._check_cns_valid(doc)
+</pre><h3>Mutant 13244</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -18,7 +18,7 @@
+         doc = list(self._only_digits(doc))
+ 
+         if len(doc) != 15 or int(doc[0]) not in self.first_digit:
+-            return False
++            return True
+ 
+         return self._check_cns_valid(doc)
+ 
+</pre><h3>Mutant 13245</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -24,7 +24,7 @@
+ 
+     def _validate_first_case(self, doc: list) -> bool:
+         """Validar CNSs que comecem com 1 ou 2."""
+-        cns = self._generate_first_case(doc)
++        cns = None
+ 
+         return cns == doc
+ 
+</pre><h3>Mutant 13246</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -26,7 +26,7 @@
+         """Validar CNSs que comecem com 1 ou 2."""
+         cns = self._generate_first_case(doc)
+ 
+-        return cns == doc
++        return cns != doc
+ 
+     def _validate_second_case(self, doc: list) -> bool:
+         """Validar CNSs que comecem com 7, 8 ou 9."""
+</pre><h3>Mutant 13247</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -30,7 +30,7 @@
+ 
+     def _validate_second_case(self, doc: list) -> bool:
+         """Validar CNSs que comecem com 7, 8 ou 9."""
+-        sum = self._sum_algorithm(doc)
++        sum = None
+ 
+         return sum % 11 == 0
+ 
+</pre><h3>Mutant 13248</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -32,7 +32,7 @@
+         """Validar CNSs que comecem com 7, 8 ou 9."""
+         sum = self._sum_algorithm(doc)
+ 
+-        return sum % 11 == 0
++        return sum / 11 == 0
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CNS."""
+</pre><h3>Mutant 13249</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -32,7 +32,7 @@
+         """Validar CNSs que comecem com 7, 8 ou 9."""
+         sum = self._sum_algorithm(doc)
+ 
+-        return sum % 11 == 0
++        return sum % 12 == 0
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CNS."""
+</pre><h3>Mutant 13250</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -32,7 +32,7 @@
+         """Validar CNSs que comecem com 7, 8 ou 9."""
+         sum = self._sum_algorithm(doc)
+ 
+-        return sum % 11 == 0
++        return sum % 11 != 0
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CNS."""
+</pre><h3>Mutant 13251</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -32,7 +32,7 @@
+         """Validar CNSs que comecem com 7, 8 ou 9."""
+         sum = self._sum_algorithm(doc)
+ 
+-        return sum % 11 == 0
++        return sum % 11 == 1
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CNS."""
+</pre><h3>Mutant 13252</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -34,7 +34,7 @@
+ 
+         return sum % 11 == 0
+ 
+-    def generate(self, mask: bool = False) -> str:
++    def generate(self, mask: bool = True) -> str:
+         """Gerar CNS."""
+         # Primeiro dígito válido
+         cns = [str(sample(self.first_digit, 1)[0])]
+</pre><h3>Mutant 13253</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -37,7 +37,7 @@
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CNS."""
+         # Primeiro dígito válido
+-        cns = [str(sample(self.first_digit, 1)[0])]
++        cns = [str(sample(self.first_digit, 2)[0])]
+ 
+         # Geração irá depender do resultado do primeiro dígito
+         if cns[0] in ['1', '2']:
+</pre><h3>Mutant 13254</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -37,7 +37,7 @@
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CNS."""
+         # Primeiro dígito válido
+-        cns = [str(sample(self.first_digit, 1)[0])]
++        cns = [str(sample(self.first_digit, 1)[1])]
+ 
+         # Geração irá depender do resultado do primeiro dígito
+         if cns[0] in ['1', '2']:
+</pre><h3>Mutant 13255</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -37,7 +37,7 @@
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CNS."""
+         # Primeiro dígito válido
+-        cns = [str(sample(self.first_digit, 1)[0])]
++        cns = None
+ 
+         # Geração irá depender do resultado do primeiro dígito
+         if cns[0] in ['1', '2']:
+</pre><h3>Mutant 13256</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -40,7 +40,7 @@
+         cns = [str(sample(self.first_digit, 1)[0])]
+ 
+         # Geração irá depender do resultado do primeiro dígito
+-        if cns[0] in ['1', '2']:
++        if cns[1] in ['1', '2']:
+             cns = self._generate_first_case(cns, True)
+         else:
+             cns = self._generate_second_case(cns)
+</pre><h3>Mutant 13257</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -40,7 +40,7 @@
+         cns = [str(sample(self.first_digit, 1)[0])]
+ 
+         # Geração irá depender do resultado do primeiro dígito
+-        if cns[0] in ['1', '2']:
++        if cns[0] not in ['1', '2']:
+             cns = self._generate_first_case(cns, True)
+         else:
+             cns = self._generate_second_case(cns)
+</pre><h3>Mutant 13258</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -40,7 +40,7 @@
+         cns = [str(sample(self.first_digit, 1)[0])]
+ 
+         # Geração irá depender do resultado do primeiro dígito
+-        if cns[0] in ['1', '2']:
++        if cns[0] in ['XX1XX', '2']:
+             cns = self._generate_first_case(cns, True)
+         else:
+             cns = self._generate_second_case(cns)
+</pre><h3>Mutant 13259</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -40,7 +40,7 @@
+         cns = [str(sample(self.first_digit, 1)[0])]
+ 
+         # Geração irá depender do resultado do primeiro dígito
+-        if cns[0] in ['1', '2']:
++        if cns[0] in ['1', 'XX2XX']:
+             cns = self._generate_first_case(cns, True)
+         else:
+             cns = self._generate_second_case(cns)
+</pre><h3>Mutant 13260</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -41,7 +41,7 @@
+ 
+         # Geração irá depender do resultado do primeiro dígito
+         if cns[0] in ['1', '2']:
+-            cns = self._generate_first_case(cns, True)
++            cns = self._generate_first_case(cns, False)
+         else:
+             cns = self._generate_second_case(cns)
+ 
+</pre><h3>Mutant 13261</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -41,7 +41,7 @@
+ 
+         # Geração irá depender do resultado do primeiro dígito
+         if cns[0] in ['1', '2']:
+-            cns = self._generate_first_case(cns, True)
++            cns = None
+         else:
+             cns = self._generate_second_case(cns)
+ 
+</pre><h3>Mutant 13262</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -43,7 +43,7 @@
+         if cns[0] in ['1', '2']:
+             cns = self._generate_first_case(cns, True)
+         else:
+-            cns = self._generate_second_case(cns)
++            cns = None
+ 
+         cns = ''.join(cns)
+ 
+</pre><h3>Mutant 13263</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -45,7 +45,7 @@
+         else:
+             cns = self._generate_second_case(cns)
+ 
+-        cns = ''.join(cns)
++        cns = 'XXXX'.join(cns)
+ 
+         return self.mask(cns) if mask else cns
+ 
+</pre><h3>Mutant 13264</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -45,7 +45,7 @@
+         else:
+             cns = self._generate_second_case(cns)
+ 
+-        cns = ''.join(cns)
++        cns = None
+ 
+         return self.mask(cns) if mask else cns
+ 
+</pre><h3>Mutant 13265</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -49,7 +49,7 @@
+ 
+         return self.mask(cns) if mask else cns
+ 
+-    def mask(self, doc: str = '') -> str:
++    def mask(self, doc: str = 'XXXX') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+         return f"{doc[:3]} {doc[3:7]} {doc[7:11]} {doc[-4:]}"
+ 
+</pre><h3>Mutant 13266</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -51,7 +51,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]} {doc[3:7]} {doc[7:11]} {doc[-4:]}"
++        return f"{doc[:4]} {doc[3:7]} {doc[7:11]} {doc[-4:]}"
+ 
+     def _generate_first_case(self, cns: list, generate_random=False) -> list:
+         """Gera um CNS válido para os casos que se inicia com 1 ou 2."""
+</pre><h3>Mutant 13267</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -51,7 +51,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]} {doc[3:7]} {doc[7:11]} {doc[-4:]}"
++        return f"{doc[:3]} {doc[4:7]} {doc[7:11]} {doc[-4:]}"
+ 
+     def _generate_first_case(self, cns: list, generate_random=False) -> list:
+         """Gera um CNS válido para os casos que se inicia com 1 ou 2."""
+</pre><h3>Mutant 13268</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -51,7 +51,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]} {doc[3:7]} {doc[7:11]} {doc[-4:]}"
++        return f"{doc[:3]} {doc[3:8]} {doc[7:11]} {doc[-4:]}"
+ 
+     def _generate_first_case(self, cns: list, generate_random=False) -> list:
+         """Gera um CNS válido para os casos que se inicia com 1 ou 2."""
+</pre><h3>Mutant 13269</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -51,7 +51,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]} {doc[3:7]} {doc[7:11]} {doc[-4:]}"
++        return f"{doc[:3]} {doc[3:7]} {doc[8:11]} {doc[-4:]}"
+ 
+     def _generate_first_case(self, cns: list, generate_random=False) -> list:
+         """Gera um CNS válido para os casos que se inicia com 1 ou 2."""
+</pre><h3>Mutant 13270</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -51,7 +51,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]} {doc[3:7]} {doc[7:11]} {doc[-4:]}"
++        return f"{doc[:3]} {doc[3:7]} {doc[7:12]} {doc[-4:]}"
+ 
+     def _generate_first_case(self, cns: list, generate_random=False) -> list:
+         """Gera um CNS válido para os casos que se inicia com 1 ou 2."""
+</pre><h3>Mutant 13271</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -51,7 +51,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]} {doc[3:7]} {doc[7:11]} {doc[-4:]}"
++        return f"{doc[:3]} {doc[3:7]} {doc[7:11]} {doc[+4:]}"
+ 
+     def _generate_first_case(self, cns: list, generate_random=False) -> list:
+         """Gera um CNS válido para os casos que se inicia com 1 ou 2."""
+</pre><h3>Mutant 13272</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -51,7 +51,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]} {doc[3:7]} {doc[7:11]} {doc[-4:]}"
++        return f"{doc[:3]} {doc[3:7]} {doc[7:11]} {doc[-5:]}"
+ 
+     def _generate_first_case(self, cns: list, generate_random=False) -> list:
+         """Gera um CNS válido para os casos que se inicia com 1 ou 2."""
+</pre><h3>Mutant 13273</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -51,7 +51,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]} {doc[3:7]} {doc[7:11]} {doc[-4:]}"
++        return f"XX{doc[:3]} {doc[3:7]} {doc[7:11]} {doc[-4:]}XX"
+ 
+     def _generate_first_case(self, cns: list, generate_random=False) -> list:
+         """Gera um CNS válido para os casos que se inicia com 1 ou 2."""
+</pre><h3>Mutant 13274</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -53,7 +53,7 @@
+         """Coloca a máscara de CPF na variável doc."""
+         return f"{doc[:3]} {doc[3:7]} {doc[7:11]} {doc[-4:]}"
+ 
+-    def _generate_first_case(self, cns: list, generate_random=False) -> list:
++    def _generate_first_case(self, cns: list, generate_random=True) -> list:
+         """Gera um CNS válido para os casos que se inicia com 1 ou 2."""
+         if generate_random:
+             # Adiciona os próximos 10 dígitos
+</pre><h3>Mutant 13275</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -57,7 +57,7 @@
+         """Gera um CNS válido para os casos que se inicia com 1 ou 2."""
+         if generate_random:
+             # Adiciona os próximos 10 dígitos
+-            cns = cns + [str(sample(self.digits, 1)[0]) for i in range(10)]
++            cns = cns - [str(sample(self.digits, 1)[0]) for i in range(10)]
+         else:
+             # Pega apenas a parte que precisamos do CNS
+             cns = cns[:11]
+</pre><h3>Mutant 13276</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -57,7 +57,7 @@
+         """Gera um CNS válido para os casos que se inicia com 1 ou 2."""
+         if generate_random:
+             # Adiciona os próximos 10 dígitos
+-            cns = cns + [str(sample(self.digits, 1)[0]) for i in range(10)]
++            cns = cns + [str(sample(self.digits, 2)[0]) for i in range(10)]
+         else:
+             # Pega apenas a parte que precisamos do CNS
+             cns = cns[:11]
+</pre><h3>Mutant 13277</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -57,7 +57,7 @@
+         """Gera um CNS válido para os casos que se inicia com 1 ou 2."""
+         if generate_random:
+             # Adiciona os próximos 10 dígitos
+-            cns = cns + [str(sample(self.digits, 1)[0]) for i in range(10)]
++            cns = cns + [str(sample(self.digits, 1)[1]) for i in range(10)]
+         else:
+             # Pega apenas a parte que precisamos do CNS
+             cns = cns[:11]
+</pre><h3>Mutant 13278</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -57,7 +57,7 @@
+         """Gera um CNS válido para os casos que se inicia com 1 ou 2."""
+         if generate_random:
+             # Adiciona os próximos 10 dígitos
+-            cns = cns + [str(sample(self.digits, 1)[0]) for i in range(10)]
++            cns = cns + [str(sample(self.digits, 1)[0]) for i in range(11)]
+         else:
+             # Pega apenas a parte que precisamos do CNS
+             cns = cns[:11]
+</pre><h3>Mutant 13279</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -57,7 +57,7 @@
+         """Gera um CNS válido para os casos que se inicia com 1 ou 2."""
+         if generate_random:
+             # Adiciona os próximos 10 dígitos
+-            cns = cns + [str(sample(self.digits, 1)[0]) for i in range(10)]
++            cns = None
+         else:
+             # Pega apenas a parte que precisamos do CNS
+             cns = cns[:11]
+</pre><h3>Mutant 13280</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -60,7 +60,7 @@
+             cns = cns + [str(sample(self.digits, 1)[0]) for i in range(10)]
+         else:
+             # Pega apenas a parte que precisamos do CNS
+-            cns = cns[:11]
++            cns = cns[:12]
+ 
+         # Processo de soma
+         sum = self._sum_algorithm(cns, 11)
+</pre><h3>Mutant 13281</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -60,7 +60,7 @@
+             cns = cns + [str(sample(self.digits, 1)[0]) for i in range(10)]
+         else:
+             # Pega apenas a parte que precisamos do CNS
+-            cns = cns[:11]
++            cns = None
+ 
+         # Processo de soma
+         sum = self._sum_algorithm(cns, 11)
+</pre><h3>Mutant 13282</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -63,7 +63,7 @@
+             cns = cns[:11]
+ 
+         # Processo de soma
+-        sum = self._sum_algorithm(cns, 11)
++        sum = self._sum_algorithm(cns, 12)
+ 
+         dv = 11 - (sum % 11)
+ 
+</pre><h3>Mutant 13283</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -63,7 +63,7 @@
+             cns = cns[:11]
+ 
+         # Processo de soma
+-        sum = self._sum_algorithm(cns, 11)
++        sum = None
+ 
+         dv = 11 - (sum % 11)
+ 
+</pre><h3>Mutant 13284</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -65,7 +65,7 @@
+         # Processo de soma
+         sum = self._sum_algorithm(cns, 11)
+ 
+-        dv = 11 - (sum % 11)
++        dv = 12 - (sum % 11)
+ 
+         if dv == 11:
+             dv = 0
+</pre><h3>Mutant 13285</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -65,7 +65,7 @@
+         # Processo de soma
+         sum = self._sum_algorithm(cns, 11)
+ 
+-        dv = 11 - (sum % 11)
++        dv = 11 + (sum % 11)
+ 
+         if dv == 11:
+             dv = 0
+</pre><h3>Mutant 13286</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -65,7 +65,7 @@
+         # Processo de soma
+         sum = self._sum_algorithm(cns, 11)
+ 
+-        dv = 11 - (sum % 11)
++        dv = 11 - (sum / 11)
+ 
+         if dv == 11:
+             dv = 0
+</pre><h3>Mutant 13287</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -65,7 +65,7 @@
+         # Processo de soma
+         sum = self._sum_algorithm(cns, 11)
+ 
+-        dv = 11 - (sum % 11)
++        dv = 11 - (sum % 12)
+ 
+         if dv == 11:
+             dv = 0
+</pre><h3>Mutant 13288</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -65,7 +65,7 @@
+         # Processo de soma
+         sum = self._sum_algorithm(cns, 11)
+ 
+-        dv = 11 - (sum % 11)
++        dv = None
+ 
+         if dv == 11:
+             dv = 0
+</pre><h3>Mutant 13289</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -67,7 +67,7 @@
+ 
+         dv = 11 - (sum % 11)
+ 
+-        if dv == 11:
++        if dv != 11:
+             dv = 0
+ 
+         if dv == 10:
+</pre><h3>Mutant 13290</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -67,7 +67,7 @@
+ 
+         dv = 11 - (sum % 11)
+ 
+-        if dv == 11:
++        if dv == 12:
+             dv = 0
+ 
+         if dv == 10:
+</pre><h3>Mutant 13291</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -68,7 +68,7 @@
+         dv = 11 - (sum % 11)
+ 
+         if dv == 11:
+-            dv = 0
++            dv = 1
+ 
+         if dv == 10:
+             sum += 2
+</pre><h3>Mutant 13292</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -68,7 +68,7 @@
+         dv = 11 - (sum % 11)
+ 
+         if dv == 11:
+-            dv = 0
++            dv = None
+ 
+         if dv == 10:
+             sum += 2
+</pre><h3>Mutant 13293</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -70,7 +70,7 @@
+         if dv == 11:
+             dv = 0
+ 
+-        if dv == 10:
++        if dv != 10:
+             sum += 2
+             dv = 11 - (sum % 11)
+             cns = cns + ['0', '0', '1', str(dv)]
+</pre><h3>Mutant 13294</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -70,7 +70,7 @@
+         if dv == 11:
+             dv = 0
+ 
+-        if dv == 10:
++        if dv == 11:
+             sum += 2
+             dv = 11 - (sum % 11)
+             cns = cns + ['0', '0', '1', str(dv)]
+</pre><h3>Mutant 13295</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -71,7 +71,7 @@
+             dv = 0
+ 
+         if dv == 10:
+-            sum += 2
++            sum = 2
+             dv = 11 - (sum % 11)
+             cns = cns + ['0', '0', '1', str(dv)]
+         else:
+</pre><h3>Mutant 13296</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -71,7 +71,7 @@
+             dv = 0
+ 
+         if dv == 10:
+-            sum += 2
++            sum -= 2
+             dv = 11 - (sum % 11)
+             cns = cns + ['0', '0', '1', str(dv)]
+         else:
+</pre><h3>Mutant 13297</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -71,7 +71,7 @@
+             dv = 0
+ 
+         if dv == 10:
+-            sum += 2
++            sum += 3
+             dv = 11 - (sum % 11)
+             cns = cns + ['0', '0', '1', str(dv)]
+         else:
+</pre><h3>Mutant 13298</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -72,7 +72,7 @@
+ 
+         if dv == 10:
+             sum += 2
+-            dv = 11 - (sum % 11)
++            dv = 12 - (sum % 11)
+             cns = cns + ['0', '0', '1', str(dv)]
+         else:
+             cns = cns + ['0', '0', '0', str(dv)]
+</pre><h3>Mutant 13299</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -72,7 +72,7 @@
+ 
+         if dv == 10:
+             sum += 2
+-            dv = 11 - (sum % 11)
++            dv = 11 + (sum % 11)
+             cns = cns + ['0', '0', '1', str(dv)]
+         else:
+             cns = cns + ['0', '0', '0', str(dv)]
+</pre><h3>Mutant 13300</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -72,7 +72,7 @@
+ 
+         if dv == 10:
+             sum += 2
+-            dv = 11 - (sum % 11)
++            dv = 11 - (sum / 11)
+             cns = cns + ['0', '0', '1', str(dv)]
+         else:
+             cns = cns + ['0', '0', '0', str(dv)]
+</pre><h3>Mutant 13301</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -72,7 +72,7 @@
+ 
+         if dv == 10:
+             sum += 2
+-            dv = 11 - (sum % 11)
++            dv = 11 - (sum % 12)
+             cns = cns + ['0', '0', '1', str(dv)]
+         else:
+             cns = cns + ['0', '0', '0', str(dv)]
+</pre><h3>Mutant 13302</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -72,7 +72,7 @@
+ 
+         if dv == 10:
+             sum += 2
+-            dv = 11 - (sum % 11)
++            dv = None
+             cns = cns + ['0', '0', '1', str(dv)]
+         else:
+             cns = cns + ['0', '0', '0', str(dv)]
+</pre><h3>Mutant 13303</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -73,7 +73,7 @@
+         if dv == 10:
+             sum += 2
+             dv = 11 - (sum % 11)
+-            cns = cns + ['0', '0', '1', str(dv)]
++            cns = cns - ['0', '0', '1', str(dv)]
+         else:
+             cns = cns + ['0', '0', '0', str(dv)]
+ 
+</pre><h3>Mutant 13304</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -73,7 +73,7 @@
+         if dv == 10:
+             sum += 2
+             dv = 11 - (sum % 11)
+-            cns = cns + ['0', '0', '1', str(dv)]
++            cns = cns + ['XX0XX', '0', '1', str(dv)]
+         else:
+             cns = cns + ['0', '0', '0', str(dv)]
+ 
+</pre><h3>Mutant 13305</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -73,7 +73,7 @@
+         if dv == 10:
+             sum += 2
+             dv = 11 - (sum % 11)
+-            cns = cns + ['0', '0', '1', str(dv)]
++            cns = cns + ['0', 'XX0XX', '1', str(dv)]
+         else:
+             cns = cns + ['0', '0', '0', str(dv)]
+ 
+</pre><h3>Mutant 13306</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -73,7 +73,7 @@
+         if dv == 10:
+             sum += 2
+             dv = 11 - (sum % 11)
+-            cns = cns + ['0', '0', '1', str(dv)]
++            cns = cns + ['0', '0', 'XX1XX', str(dv)]
+         else:
+             cns = cns + ['0', '0', '0', str(dv)]
+ 
+</pre><h3>Mutant 13307</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -73,7 +73,7 @@
+         if dv == 10:
+             sum += 2
+             dv = 11 - (sum % 11)
+-            cns = cns + ['0', '0', '1', str(dv)]
++            cns = None
+         else:
+             cns = cns + ['0', '0', '0', str(dv)]
+ 
+</pre><h3>Mutant 13308</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -75,7 +75,7 @@
+             dv = 11 - (sum % 11)
+             cns = cns + ['0', '0', '1', str(dv)]
+         else:
+-            cns = cns + ['0', '0', '0', str(dv)]
++            cns = cns - ['0', '0', '0', str(dv)]
+ 
+         return cns
+ 
+</pre><h3>Mutant 13309</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -75,7 +75,7 @@
+             dv = 11 - (sum % 11)
+             cns = cns + ['0', '0', '1', str(dv)]
+         else:
+-            cns = cns + ['0', '0', '0', str(dv)]
++            cns = cns + ['XX0XX', '0', '0', str(dv)]
+ 
+         return cns
+ 
+</pre><h3>Mutant 13310</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -75,7 +75,7 @@
+             dv = 11 - (sum % 11)
+             cns = cns + ['0', '0', '1', str(dv)]
+         else:
+-            cns = cns + ['0', '0', '0', str(dv)]
++            cns = cns + ['0', 'XX0XX', '0', str(dv)]
+ 
+         return cns
+ 
+</pre><h3>Mutant 13311</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -75,7 +75,7 @@
+             dv = 11 - (sum % 11)
+             cns = cns + ['0', '0', '1', str(dv)]
+         else:
+-            cns = cns + ['0', '0', '0', str(dv)]
++            cns = cns + ['0', '0', 'XX0XX', str(dv)]
+ 
+         return cns
+ 
+</pre><h3>Mutant 13312</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -75,7 +75,7 @@
+             dv = 11 - (sum % 11)
+             cns = cns + ['0', '0', '1', str(dv)]
+         else:
+-            cns = cns + ['0', '0', '0', str(dv)]
++            cns = None
+ 
+         return cns
+ 
+</pre><h3>Mutant 13313</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -82,7 +82,7 @@
+     def _generate_second_case(self, cns: list) -> list:
+         """Gera um CNS válido para os casos que se inicia com 7, 8 ou 9."""
+         # Gerar os próximos 14 dígitos
+-        cns = cns + [str(sample(list(range(10)), 1)[0]) for i in range(14)]
++        cns = cns - [str(sample(list(range(10)), 1)[0]) for i in range(14)]
+         sum = self._sum_algorithm(cns)
+         rest = sum % 11
+ 
+</pre><h3>Mutant 13314</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -82,7 +82,7 @@
+     def _generate_second_case(self, cns: list) -> list:
+         """Gera um CNS válido para os casos que se inicia com 7, 8 ou 9."""
+         # Gerar os próximos 14 dígitos
+-        cns = cns + [str(sample(list(range(10)), 1)[0]) for i in range(14)]
++        cns = cns + [str(sample(list(range(11)), 1)[0]) for i in range(14)]
+         sum = self._sum_algorithm(cns)
+         rest = sum % 11
+ 
+</pre><h3>Mutant 13315</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -82,7 +82,7 @@
+     def _generate_second_case(self, cns: list) -> list:
+         """Gera um CNS válido para os casos que se inicia com 7, 8 ou 9."""
+         # Gerar os próximos 14 dígitos
+-        cns = cns + [str(sample(list(range(10)), 1)[0]) for i in range(14)]
++        cns = cns + [str(sample(list(range(10)), 2)[0]) for i in range(14)]
+         sum = self._sum_algorithm(cns)
+         rest = sum % 11
+ 
+</pre><h3>Mutant 13316</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -82,7 +82,7 @@
+     def _generate_second_case(self, cns: list) -> list:
+         """Gera um CNS válido para os casos que se inicia com 7, 8 ou 9."""
+         # Gerar os próximos 14 dígitos
+-        cns = cns + [str(sample(list(range(10)), 1)[0]) for i in range(14)]
++        cns = cns + [str(sample(list(range(10)), 1)[1]) for i in range(14)]
+         sum = self._sum_algorithm(cns)
+         rest = sum % 11
+ 
+</pre><h3>Mutant 13317</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -82,7 +82,7 @@
+     def _generate_second_case(self, cns: list) -> list:
+         """Gera um CNS válido para os casos que se inicia com 7, 8 ou 9."""
+         # Gerar os próximos 14 dígitos
+-        cns = cns + [str(sample(list(range(10)), 1)[0]) for i in range(14)]
++        cns = cns + [str(sample(list(range(10)), 1)[0]) for i in range(15)]
+         sum = self._sum_algorithm(cns)
+         rest = sum % 11
+ 
+</pre><h3>Mutant 13318</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -82,7 +82,7 @@
+     def _generate_second_case(self, cns: list) -> list:
+         """Gera um CNS válido para os casos que se inicia com 7, 8 ou 9."""
+         # Gerar os próximos 14 dígitos
+-        cns = cns + [str(sample(list(range(10)), 1)[0]) for i in range(14)]
++        cns = None
+         sum = self._sum_algorithm(cns)
+         rest = sum % 11
+ 
+</pre><h3>Mutant 13319</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -83,7 +83,7 @@
+         """Gera um CNS válido para os casos que se inicia com 7, 8 ou 9."""
+         # Gerar os próximos 14 dígitos
+         cns = cns + [str(sample(list(range(10)), 1)[0]) for i in range(14)]
+-        sum = self._sum_algorithm(cns)
++        sum = None
+         rest = sum % 11
+ 
+         if rest == 0:
+</pre><h3>Mutant 13320</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -84,7 +84,7 @@
+         # Gerar os próximos 14 dígitos
+         cns = cns + [str(sample(list(range(10)), 1)[0]) for i in range(14)]
+         sum = self._sum_algorithm(cns)
+-        rest = sum % 11
++        rest = sum / 11
+ 
+         if rest == 0:
+             return cns
+</pre><h3>Mutant 13321</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -84,7 +84,7 @@
+         # Gerar os próximos 14 dígitos
+         cns = cns + [str(sample(list(range(10)), 1)[0]) for i in range(14)]
+         sum = self._sum_algorithm(cns)
+-        rest = sum % 11
++        rest = sum % 12
+ 
+         if rest == 0:
+             return cns
+</pre><h3>Mutant 13322</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -84,7 +84,7 @@
+         # Gerar os próximos 14 dígitos
+         cns = cns + [str(sample(list(range(10)), 1)[0]) for i in range(14)]
+         sum = self._sum_algorithm(cns)
+-        rest = sum % 11
++        rest = None
+ 
+         if rest == 0:
+             return cns
+</pre><h3>Mutant 13323</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -86,7 +86,7 @@
+         sum = self._sum_algorithm(cns)
+         rest = sum % 11
+ 
+-        if rest == 0:
++        if rest != 0:
+             return cns
+ 
+         # Resto para o próximo múltiplo de 11
+</pre><h3>Mutant 13324</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -86,7 +86,7 @@
+         sum = self._sum_algorithm(cns)
+         rest = sum % 11
+ 
+-        if rest == 0:
++        if rest == 1:
+             return cns
+ 
+         # Resto para o próximo múltiplo de 11
+</pre><h3>Mutant 13325</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -90,7 +90,7 @@
+             return cns
+ 
+         # Resto para o próximo múltiplo de 11
+-        diff = 11 - rest
++        diff = 12 - rest
+ 
+         # Verificar qual é o mais próximo
+         return self._change_cns(cns, 15 - diff, diff)
+</pre><h3>Mutant 13326</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -90,7 +90,7 @@
+             return cns
+ 
+         # Resto para o próximo múltiplo de 11
+-        diff = 11 - rest
++        diff = 11 + rest
+ 
+         # Verificar qual é o mais próximo
+         return self._change_cns(cns, 15 - diff, diff)
+</pre><h3>Mutant 13327</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -90,7 +90,7 @@
+             return cns
+ 
+         # Resto para o próximo múltiplo de 11
+-        diff = 11 - rest
++        diff = None
+ 
+         # Verificar qual é o mais próximo
+         return self._change_cns(cns, 15 - diff, diff)
+</pre><h3>Mutant 13328</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -93,7 +93,7 @@
+         diff = 11 - rest
+ 
+         # Verificar qual é o mais próximo
+-        return self._change_cns(cns, 15 - diff, diff)
++        return self._change_cns(cns, 16 - diff, diff)
+ 
+     def _change_cns(self, cns: list, i: int, val: int) -> list:
+         """Altera o CNS recursivamente para que atenda as especificações de
+</pre><h3>Mutant 13329</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -93,7 +93,7 @@
+         diff = 11 - rest
+ 
+         # Verificar qual é o mais próximo
+-        return self._change_cns(cns, 15 - diff, diff)
++        return self._change_cns(cns, 15 + diff, diff)
+ 
+     def _change_cns(self, cns: list, i: int, val: int) -> list:
+         """Altera o CNS recursivamente para que atenda as especificações de
+</pre><h3>Mutant 13330</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -98,7 +98,7 @@
+     def _change_cns(self, cns: list, i: int, val: int) -> list:
+         """Altera o CNS recursivamente para que atenda as especificações de
+         validade dele."""
+-        if val == 0:
++        if val != 0:
+             if self._check_cns_valid(cns):
+                 return cns
+             else:
+</pre><h3>Mutant 13331</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -98,7 +98,7 @@
+     def _change_cns(self, cns: list, i: int, val: int) -> list:
+         """Altera o CNS recursivamente para que atenda as especificações de
+         validade dele."""
+-        if val == 0:
++        if val == 1:
+             if self._check_cns_valid(cns):
+                 return cns
+             else:
+</pre><h3>Mutant 13332</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -102,7 +102,7 @@
+             if self._check_cns_valid(cns):
+                 return cns
+             else:
+-                sum = self._sum_algorithm(cns)
++                sum = None
+                 diff = 15 - (sum % 11)
+                 return self._change_cns(cns, 15 - diff, diff)
+ 
+</pre><h3>Mutant 13333</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -103,7 +103,7 @@
+                 return cns
+             else:
+                 sum = self._sum_algorithm(cns)
+-                diff = 15 - (sum % 11)
++                diff = 16 - (sum % 11)
+                 return self._change_cns(cns, 15 - diff, diff)
+ 
+         if 15 - i > val:
+</pre><h3>Mutant 13334</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -103,7 +103,7 @@
+                 return cns
+             else:
+                 sum = self._sum_algorithm(cns)
+-                diff = 15 - (sum % 11)
++                diff = 15 + (sum % 11)
+                 return self._change_cns(cns, 15 - diff, diff)
+ 
+         if 15 - i > val:
+</pre><h3>Mutant 13335</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -103,7 +103,7 @@
+                 return cns
+             else:
+                 sum = self._sum_algorithm(cns)
+-                diff = 15 - (sum % 11)
++                diff = 15 - (sum / 11)
+                 return self._change_cns(cns, 15 - diff, diff)
+ 
+         if 15 - i > val:
+</pre><h3>Mutant 13336</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -103,7 +103,7 @@
+                 return cns
+             else:
+                 sum = self._sum_algorithm(cns)
+-                diff = 15 - (sum % 11)
++                diff = 15 - (sum % 12)
+                 return self._change_cns(cns, 15 - diff, diff)
+ 
+         if 15 - i > val:
+</pre><h3>Mutant 13337</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -103,7 +103,7 @@
+                 return cns
+             else:
+                 sum = self._sum_algorithm(cns)
+-                diff = 15 - (sum % 11)
++                diff = None
+                 return self._change_cns(cns, 15 - diff, diff)
+ 
+         if 15 - i > val:
+</pre><h3>Mutant 13338</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -104,7 +104,7 @@
+             else:
+                 sum = self._sum_algorithm(cns)
+                 diff = 15 - (sum % 11)
+-                return self._change_cns(cns, 15 - diff, diff)
++                return self._change_cns(cns, 16 - diff, diff)
+ 
+         if 15 - i > val:
+             i += 1
+</pre><h3>Mutant 13339</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -104,7 +104,7 @@
+             else:
+                 sum = self._sum_algorithm(cns)
+                 diff = 15 - (sum % 11)
+-                return self._change_cns(cns, 15 - diff, diff)
++                return self._change_cns(cns, 15 + diff, diff)
+ 
+         if 15 - i > val:
+             i += 1
+</pre><h3>Mutant 13340</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -106,7 +106,7 @@
+                 diff = 15 - (sum % 11)
+                 return self._change_cns(cns, 15 - diff, diff)
+ 
+-        if 15 - i > val:
++        if 16 - i > val:
+             i += 1
+             return self._change_cns(cns, i, val)
+ 
+</pre><h3>Mutant 13341</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -106,7 +106,7 @@
+                 diff = 15 - (sum % 11)
+                 return self._change_cns(cns, 15 - diff, diff)
+ 
+-        if 15 - i > val:
++        if 15 + i > val:
+             i += 1
+             return self._change_cns(cns, i, val)
+ 
+</pre><h3>Mutant 13342</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -106,7 +106,7 @@
+                 diff = 15 - (sum % 11)
+                 return self._change_cns(cns, 15 - diff, diff)
+ 
+-        if 15 - i > val:
++        if 15 - i >= val:
+             i += 1
+             return self._change_cns(cns, i, val)
+ 
+</pre><h3>Mutant 13343</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -107,7 +107,7 @@
+                 return self._change_cns(cns, 15 - diff, diff)
+ 
+         if 15 - i > val:
+-            i += 1
++            i = 1
+             return self._change_cns(cns, i, val)
+ 
+         if cns[i] != '9':
+</pre><h3>Mutant 13344</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -107,7 +107,7 @@
+                 return self._change_cns(cns, 15 - diff, diff)
+ 
+         if 15 - i > val:
+-            i += 1
++            i -= 1
+             return self._change_cns(cns, i, val)
+ 
+         if cns[i] != '9':
+</pre><h3>Mutant 13345</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -107,7 +107,7 @@
+                 return self._change_cns(cns, 15 - diff, diff)
+ 
+         if 15 - i > val:
+-            i += 1
++            i += 2
+             return self._change_cns(cns, i, val)
+ 
+         if cns[i] != '9':
+</pre><h3>Mutant 13346</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -110,7 +110,7 @@
+             i += 1
+             return self._change_cns(cns, i, val)
+ 
+-        if cns[i] != '9':
++        if cns[i] == '9':
+             cns[i] = str(int(cns[i]) + 1)
+             val -= (15 - i)
+         else:
+</pre><h3>Mutant 13347</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -110,7 +110,7 @@
+             i += 1
+             return self._change_cns(cns, i, val)
+ 
+-        if cns[i] != '9':
++        if cns[i] != 'XX9XX':
+             cns[i] = str(int(cns[i]) + 1)
+             val -= (15 - i)
+         else:
+</pre><h3>Mutant 13348</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -111,7 +111,7 @@
+             return self._change_cns(cns, i, val)
+ 
+         if cns[i] != '9':
+-            cns[i] = str(int(cns[i]) + 1)
++            cns[i] = str(int(cns[i]) - 1)
+             val -= (15 - i)
+         else:
+             val += (15 - i)
+</pre><h3>Mutant 13349</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -111,7 +111,7 @@
+             return self._change_cns(cns, i, val)
+ 
+         if cns[i] != '9':
+-            cns[i] = str(int(cns[i]) + 1)
++            cns[i] = str(int(cns[i]) + 2)
+             val -= (15 - i)
+         else:
+             val += (15 - i)
+</pre><h3>Mutant 13350</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -111,7 +111,7 @@
+             return self._change_cns(cns, i, val)
+ 
+         if cns[i] != '9':
+-            cns[i] = str(int(cns[i]) + 1)
++            cns[i] = None
+             val -= (15 - i)
+         else:
+             val += (15 - i)
+</pre><h3>Mutant 13351</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -112,7 +112,7 @@
+ 
+         if cns[i] != '9':
+             cns[i] = str(int(cns[i]) + 1)
+-            val -= (15 - i)
++            val = (15 - i)
+         else:
+             val += (15 - i)
+             cns[i] = str(int(cns[i]) - 1)
+</pre><h3>Mutant 13352</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -112,7 +112,7 @@
+ 
+         if cns[i] != '9':
+             cns[i] = str(int(cns[i]) + 1)
+-            val -= (15 - i)
++            val += (15 - i)
+         else:
+             val += (15 - i)
+             cns[i] = str(int(cns[i]) - 1)
+</pre><h3>Mutant 13353</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -112,7 +112,7 @@
+ 
+         if cns[i] != '9':
+             cns[i] = str(int(cns[i]) + 1)
+-            val -= (15 - i)
++            val -= (16 - i)
+         else:
+             val += (15 - i)
+             cns[i] = str(int(cns[i]) - 1)
+</pre><h3>Mutant 13354</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -112,7 +112,7 @@
+ 
+         if cns[i] != '9':
+             cns[i] = str(int(cns[i]) + 1)
+-            val -= (15 - i)
++            val -= (15 + i)
+         else:
+             val += (15 - i)
+             cns[i] = str(int(cns[i]) - 1)
+</pre><h3>Mutant 13355</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -114,7 +114,7 @@
+             cns[i] = str(int(cns[i]) + 1)
+             val -= (15 - i)
+         else:
+-            val += (15 - i)
++            val = (15 - i)
+             cns[i] = str(int(cns[i]) - 1)
+             i -= 1
+ 
+</pre><h3>Mutant 13356</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -114,7 +114,7 @@
+             cns[i] = str(int(cns[i]) + 1)
+             val -= (15 - i)
+         else:
+-            val += (15 - i)
++            val -= (15 - i)
+             cns[i] = str(int(cns[i]) - 1)
+             i -= 1
+ 
+</pre><h3>Mutant 13357</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -114,7 +114,7 @@
+             cns[i] = str(int(cns[i]) + 1)
+             val -= (15 - i)
+         else:
+-            val += (15 - i)
++            val += (16 - i)
+             cns[i] = str(int(cns[i]) - 1)
+             i -= 1
+ 
+</pre><h3>Mutant 13358</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -114,7 +114,7 @@
+             cns[i] = str(int(cns[i]) + 1)
+             val -= (15 - i)
+         else:
+-            val += (15 - i)
++            val += (15 + i)
+             cns[i] = str(int(cns[i]) - 1)
+             i -= 1
+ 
+</pre><h3>Mutant 13359</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -115,7 +115,7 @@
+             val -= (15 - i)
+         else:
+             val += (15 - i)
+-            cns[i] = str(int(cns[i]) - 1)
++            cns[i] = str(int(cns[i]) + 1)
+             i -= 1
+ 
+         return self._change_cns(cns, i, val)
+</pre><h3>Mutant 13360</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -115,7 +115,7 @@
+             val -= (15 - i)
+         else:
+             val += (15 - i)
+-            cns[i] = str(int(cns[i]) - 1)
++            cns[i] = str(int(cns[i]) - 2)
+             i -= 1
+ 
+         return self._change_cns(cns, i, val)
+</pre><h3>Mutant 13361</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -115,7 +115,7 @@
+             val -= (15 - i)
+         else:
+             val += (15 - i)
+-            cns[i] = str(int(cns[i]) - 1)
++            cns[i] = None
+             i -= 1
+ 
+         return self._change_cns(cns, i, val)
+</pre><h3>Mutant 13362</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -116,7 +116,7 @@
+         else:
+             val += (15 - i)
+             cns[i] = str(int(cns[i]) - 1)
+-            i -= 1
++            i = 1
+ 
+         return self._change_cns(cns, i, val)
+ 
+</pre><h3>Mutant 13363</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -116,7 +116,7 @@
+         else:
+             val += (15 - i)
+             cns[i] = str(int(cns[i]) - 1)
+-            i -= 1
++            i += 1
+ 
+         return self._change_cns(cns, i, val)
+ 
+</pre><h3>Mutant 13364</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -116,7 +116,7 @@
+         else:
+             val += (15 - i)
+             cns[i] = str(int(cns[i]) - 1)
+-            i -= 1
++            i -= 2
+ 
+         return self._change_cns(cns, i, val)
+ 
+</pre><h3>Mutant 13365</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -120,7 +120,7 @@
+ 
+         return self._change_cns(cns, i, val)
+ 
+-    def _sum_algorithm(self, cns: list, n: int = 15) -> int:
++    def _sum_algorithm(self, cns: list, n: int = 16) -> int:
+         """Realiza o processo de soma necessária para o CNS."""
+         sum = 0
+         for i in range(n):
+</pre><h3>Mutant 13366</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -122,7 +122,7 @@
+ 
+     def _sum_algorithm(self, cns: list, n: int = 15) -> int:
+         """Realiza o processo de soma necessária para o CNS."""
+-        sum = 0
++        sum = 1
+         for i in range(n):
+             sum += int(cns[i]) * (15 - i)
+ 
+</pre><h3>Mutant 13367</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -122,7 +122,7 @@
+ 
+     def _sum_algorithm(self, cns: list, n: int = 15) -> int:
+         """Realiza o processo de soma necessária para o CNS."""
+-        sum = 0
++        sum = None
+         for i in range(n):
+             sum += int(cns[i]) * (15 - i)
+ 
+</pre><h3>Mutant 13368</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -124,7 +124,7 @@
+         """Realiza o processo de soma necessária para o CNS."""
+         sum = 0
+         for i in range(n):
+-            sum += int(cns[i]) * (15 - i)
++            sum = int(cns[i]) * (15 - i)
+ 
+         return sum
+ 
+</pre><h3>Mutant 13369</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -124,7 +124,7 @@
+         """Realiza o processo de soma necessária para o CNS."""
+         sum = 0
+         for i in range(n):
+-            sum += int(cns[i]) * (15 - i)
++            sum -= int(cns[i]) * (15 - i)
+ 
+         return sum
+ 
+</pre><h3>Mutant 13370</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -124,7 +124,7 @@
+         """Realiza o processo de soma necessária para o CNS."""
+         sum = 0
+         for i in range(n):
+-            sum += int(cns[i]) * (15 - i)
++            sum += int(cns[i]) / (15 - i)
+ 
+         return sum
+ 
+</pre><h3>Mutant 13371</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -124,7 +124,7 @@
+         """Realiza o processo de soma necessária para o CNS."""
+         sum = 0
+         for i in range(n):
+-            sum += int(cns[i]) * (15 - i)
++            sum += int(cns[i]) * (16 - i)
+ 
+         return sum
+ 
+</pre><h3>Mutant 13372</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -124,7 +124,7 @@
+         """Realiza o processo de soma necessária para o CNS."""
+         sum = 0
+         for i in range(n):
+-            sum += int(cns[i]) * (15 - i)
++            sum += int(cns[i]) * (15 + i)
+ 
+         return sum
+ 
+</pre><h3>Mutant 13373</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -130,7 +130,7 @@
+ 
+     def _check_cns_valid(self, cns: list) -> bool:
+         """Checa se o CNS é válido."""
+-        if cns[0] in ['1', '2']:
++        if cns[1] in ['1', '2']:
+             return self._validate_first_case(cns)
+         else:
+             return self._validate_second_case(cns)
+</pre><h3>Mutant 13374</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -130,7 +130,7 @@
+ 
+     def _check_cns_valid(self, cns: list) -> bool:
+         """Checa se o CNS é válido."""
+-        if cns[0] in ['1', '2']:
++        if cns[0] not in ['1', '2']:
+             return self._validate_first_case(cns)
+         else:
+             return self._validate_second_case(cns)
+</pre><h3>Mutant 13375</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -130,7 +130,7 @@
+ 
+     def _check_cns_valid(self, cns: list) -> bool:
+         """Checa se o CNS é válido."""
+-        if cns[0] in ['1', '2']:
++        if cns[0] in ['XX1XX', '2']:
+             return self._validate_first_case(cns)
+         else:
+             return self._validate_second_case(cns)
+</pre><h3>Mutant 13376</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNS.py
+@@ -130,7 +130,7 @@
+ 
+     def _check_cns_valid(self, cns: list) -> bool:
+         """Checa se o CNS é válido."""
+-        if cns[0] in ['1', '2']:
++        if cns[0] in ['1', 'XX2XX']:
+             return self._validate_first_case(cns)
+         else:
+             return self._validate_second_case(cns)
+</pre></body></html>

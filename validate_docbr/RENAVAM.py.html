@@ -1,0 +1,461 @@
+<html><body><h1>C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py</h1>Killed 0 out of 42 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 13531</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -8,7 +8,7 @@
+     """Classe referente ao Registro Nacional de Veículos Automotores (RENAVAM)."""
+ 
+     def __init__(self):
+-        self.digits = list(range(10))
++        self.digits = list(range(11))
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar RENAVAM."""
+</pre><h3>Mutant 13532</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -8,7 +8,7 @@
+     """Classe referente ao Registro Nacional de Veículos Automotores (RENAVAM)."""
+ 
+     def __init__(self):
+-        self.digits = list(range(10))
++        self.digits = None
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar RENAVAM."""
+</pre><h3>Mutant 13533</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -10,7 +10,7 @@
+     def __init__(self):
+         self.digits = list(range(10))
+ 
+-    def validate(self, doc: str = '') -> bool:
++    def validate(self, doc: str = 'XXXX') -> bool:
+         """Validar RENAVAM."""
+         if not self._validate_input(doc, [' ']):
+             return False
+</pre><h3>Mutant 13534</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -12,7 +12,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar RENAVAM."""
+-        if not self._validate_input(doc, [' ']):
++        if  self._validate_input(doc, [' ']):
+             return False
+ 
+         doc = self._only_digits(doc)
+</pre><h3>Mutant 13535</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -12,7 +12,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar RENAVAM."""
+-        if not self._validate_input(doc, [' ']):
++        if not self._validate_input(doc, ['XX XX']):
+             return False
+ 
+         doc = self._only_digits(doc)
+</pre><h3>Mutant 13536</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -13,7 +13,7 @@
+     def validate(self, doc: str = '') -> bool:
+         """Validar RENAVAM."""
+         if not self._validate_input(doc, [' ']):
+-            return False
++            return True
+ 
+         doc = self._only_digits(doc)
+ 
+</pre><h3>Mutant 13537</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -15,7 +15,7 @@
+         if not self._validate_input(doc, [' ']):
+             return False
+ 
+-        doc = self._only_digits(doc)
++        doc = None
+ 
+         if len(doc) != 11:
+             return False
+</pre><h3>Mutant 13538</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -17,7 +17,7 @@
+ 
+         doc = self._only_digits(doc)
+ 
+-        if len(doc) != 11:
++        if len(doc) == 11:
+             return False
+ 
+         last_digit = self._generate_last_digit(doc)
+</pre><h3>Mutant 13539</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -17,7 +17,7 @@
+ 
+         doc = self._only_digits(doc)
+ 
+-        if len(doc) != 11:
++        if len(doc) != 12:
+             return False
+ 
+         last_digit = self._generate_last_digit(doc)
+</pre><h3>Mutant 13540</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -18,7 +18,7 @@
+         doc = self._only_digits(doc)
+ 
+         if len(doc) != 11:
+-            return False
++            return True
+ 
+         last_digit = self._generate_last_digit(doc)
+ 
+</pre><h3>Mutant 13541</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -20,7 +20,7 @@
+         if len(doc) != 11:
+             return False
+ 
+-        last_digit = self._generate_last_digit(doc)
++        last_digit = None
+ 
+         return last_digit == doc[10]
+ 
+</pre><h3>Mutant 13542</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -22,7 +22,7 @@
+ 
+         last_digit = self._generate_last_digit(doc)
+ 
+-        return last_digit == doc[10]
++        return last_digit != doc[10]
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar Renavam."""
+</pre><h3>Mutant 13543</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -22,7 +22,7 @@
+ 
+         last_digit = self._generate_last_digit(doc)
+ 
+-        return last_digit == doc[10]
++        return last_digit == doc[11]
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar Renavam."""
+</pre><h3>Mutant 13544</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -24,7 +24,7 @@
+ 
+         return last_digit == doc[10]
+ 
+-    def generate(self, mask: bool = False) -> str:
++    def generate(self, mask: bool = True) -> str:
+         """Gerar Renavam."""
+         renavam = [str(sample(self.digits, 1)[0]) for i in range(10)]
+         renavam.append(self._generate_last_digit(renavam))
+</pre><h3>Mutant 13545</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -26,7 +26,7 @@
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar Renavam."""
+-        renavam = [str(sample(self.digits, 1)[0]) for i in range(10)]
++        renavam = [str(sample(self.digits, 2)[0]) for i in range(10)]
+         renavam.append(self._generate_last_digit(renavam))
+ 
+         renavam = ''.join(renavam)
+</pre><h3>Mutant 13546</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -26,7 +26,7 @@
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar Renavam."""
+-        renavam = [str(sample(self.digits, 1)[0]) for i in range(10)]
++        renavam = [str(sample(self.digits, 1)[1]) for i in range(10)]
+         renavam.append(self._generate_last_digit(renavam))
+ 
+         renavam = ''.join(renavam)
+</pre><h3>Mutant 13547</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -26,7 +26,7 @@
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar Renavam."""
+-        renavam = [str(sample(self.digits, 1)[0]) for i in range(10)]
++        renavam = [str(sample(self.digits, 1)[0]) for i in range(11)]
+         renavam.append(self._generate_last_digit(renavam))
+ 
+         renavam = ''.join(renavam)
+</pre><h3>Mutant 13548</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -26,7 +26,7 @@
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar Renavam."""
+-        renavam = [str(sample(self.digits, 1)[0]) for i in range(10)]
++        renavam = None
+         renavam.append(self._generate_last_digit(renavam))
+ 
+         renavam = ''.join(renavam)
+</pre><h3>Mutant 13549</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -29,7 +29,7 @@
+         renavam = [str(sample(self.digits, 1)[0]) for i in range(10)]
+         renavam.append(self._generate_last_digit(renavam))
+ 
+-        renavam = ''.join(renavam)
++        renavam = 'XXXX'.join(renavam)
+         return renavam
+ 
+     def mask(self, doc: str = '') -> str:
+</pre><h3>Mutant 13550</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -29,7 +29,7 @@
+         renavam = [str(sample(self.digits, 1)[0]) for i in range(10)]
+         renavam.append(self._generate_last_digit(renavam))
+ 
+-        renavam = ''.join(renavam)
++        renavam = None
+         return renavam
+ 
+     def mask(self, doc: str = '') -> str:
+</pre><h3>Mutant 13551</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -32,7 +32,7 @@
+         renavam = ''.join(renavam)
+         return renavam
+ 
+-    def mask(self, doc: str = '') -> str:
++    def mask(self, doc: str = 'XXXX') -> str:
+         """Coloca a máscara de Renavam na variável doc."""
+         return f"{doc[:10]}-{doc[10]}"
+ 
+</pre><h3>Mutant 13552</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -34,7 +34,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de Renavam na variável doc."""
+-        return f"{doc[:10]}-{doc[10]}"
++        return f"{doc[:11]}-{doc[10]}"
+ 
+     def _generate_last_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do Renavam."""
+</pre><h3>Mutant 13553</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -34,7 +34,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de Renavam na variável doc."""
+-        return f"{doc[:10]}-{doc[10]}"
++        return f"{doc[:10]}-{doc[11]}"
+ 
+     def _generate_last_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do Renavam."""
+</pre><h3>Mutant 13554</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -34,7 +34,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de Renavam na variável doc."""
+-        return f"{doc[:10]}-{doc[10]}"
++        return f"XX{doc[:10]}-{doc[10]}XX"
+ 
+     def _generate_last_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do Renavam."""
+</pre><h3>Mutant 13555</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -38,7 +38,7 @@
+ 
+     def _generate_last_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do Renavam."""
+-        sequence = '3298765432'
++        sequence = 'XX3298765432XX'
+         sum = 0
+ 
+         for i in range(0, 10):
+</pre><h3>Mutant 13556</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -38,7 +38,7 @@
+ 
+     def _generate_last_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do Renavam."""
+-        sequence = '3298765432'
++        sequence = None
+         sum = 0
+ 
+         for i in range(0, 10):
+</pre><h3>Mutant 13557</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -39,7 +39,7 @@
+     def _generate_last_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do Renavam."""
+         sequence = '3298765432'
+-        sum = 0
++        sum = 1
+ 
+         for i in range(0, 10):
+             sum += int(doc[i]) * int(sequence[i])
+</pre><h3>Mutant 13558</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -39,7 +39,7 @@
+     def _generate_last_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do Renavam."""
+         sequence = '3298765432'
+-        sum = 0
++        sum = None
+ 
+         for i in range(0, 10):
+             sum += int(doc[i]) * int(sequence[i])
+</pre><h3>Mutant 13559</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -41,7 +41,7 @@
+         sequence = '3298765432'
+         sum = 0
+ 
+-        for i in range(0, 10):
++        for i in range(1, 10):
+             sum += int(doc[i]) * int(sequence[i])
+ 
+         rest = (sum * 10) % 11
+</pre><h3>Mutant 13560</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -41,7 +41,7 @@
+         sequence = '3298765432'
+         sum = 0
+ 
+-        for i in range(0, 10):
++        for i in range(0, 11):
+             sum += int(doc[i]) * int(sequence[i])
+ 
+         rest = (sum * 10) % 11
+</pre><h3>Mutant 13561</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -42,7 +42,7 @@
+         sum = 0
+ 
+         for i in range(0, 10):
+-            sum += int(doc[i]) * int(sequence[i])
++            sum = int(doc[i]) * int(sequence[i])
+ 
+         rest = (sum * 10) % 11
+ 
+</pre><h3>Mutant 13562</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -42,7 +42,7 @@
+         sum = 0
+ 
+         for i in range(0, 10):
+-            sum += int(doc[i]) * int(sequence[i])
++            sum -= int(doc[i]) * int(sequence[i])
+ 
+         rest = (sum * 10) % 11
+ 
+</pre><h3>Mutant 13563</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -42,7 +42,7 @@
+         sum = 0
+ 
+         for i in range(0, 10):
+-            sum += int(doc[i]) * int(sequence[i])
++            sum += int(doc[i]) / int(sequence[i])
+ 
+         rest = (sum * 10) % 11
+ 
+</pre><h3>Mutant 13564</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -44,7 +44,7 @@
+         for i in range(0, 10):
+             sum += int(doc[i]) * int(sequence[i])
+ 
+-        rest = (sum * 10) % 11
++        rest = (sum / 10) % 11
+ 
+         if rest == 10:
+             rest = 0
+</pre><h3>Mutant 13565</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -44,7 +44,7 @@
+         for i in range(0, 10):
+             sum += int(doc[i]) * int(sequence[i])
+ 
+-        rest = (sum * 10) % 11
++        rest = (sum * 11) % 11
+ 
+         if rest == 10:
+             rest = 0
+</pre><h3>Mutant 13566</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -44,7 +44,7 @@
+         for i in range(0, 10):
+             sum += int(doc[i]) * int(sequence[i])
+ 
+-        rest = (sum * 10) % 11
++        rest = (sum * 10) / 11
+ 
+         if rest == 10:
+             rest = 0
+</pre><h3>Mutant 13567</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -44,7 +44,7 @@
+         for i in range(0, 10):
+             sum += int(doc[i]) * int(sequence[i])
+ 
+-        rest = (sum * 10) % 11
++        rest = (sum * 10) % 12
+ 
+         if rest == 10:
+             rest = 0
+</pre><h3>Mutant 13568</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -44,7 +44,7 @@
+         for i in range(0, 10):
+             sum += int(doc[i]) * int(sequence[i])
+ 
+-        rest = (sum * 10) % 11
++        rest = None
+ 
+         if rest == 10:
+             rest = 0
+</pre><h3>Mutant 13569</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -46,7 +46,7 @@
+ 
+         rest = (sum * 10) % 11
+ 
+-        if rest == 10:
++        if rest != 10:
+             rest = 0
+         return str(rest)
+ 
+</pre><h3>Mutant 13570</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -46,7 +46,7 @@
+ 
+         rest = (sum * 10) % 11
+ 
+-        if rest == 10:
++        if rest == 11:
+             rest = 0
+         return str(rest)
+ 
+</pre><h3>Mutant 13571</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -47,6 +47,6 @@
+         rest = (sum * 10) % 11
+ 
+         if rest == 10:
+-            rest = 0
++            rest = 1
+         return str(rest)
+ 
+</pre><h3>Mutant 13572</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\RENAVAM.py
+@@ -47,6 +47,6 @@
+         rest = (sum * 10) % 11
+ 
+         if rest == 10:
+-            rest = 0
++            rest = None
+         return str(rest)
+ 
+</pre></body></html>

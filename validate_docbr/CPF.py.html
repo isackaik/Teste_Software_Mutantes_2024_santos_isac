@@ -1,0 +1,928 @@
+<html><body><h1>C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py</h1>Killed 0 out of 85 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 13377</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -7,7 +7,7 @@
+ class CPF(BaseDoc):
+     """Classe referente ao Cadastro de Pessoas Físicas (CPF)."""
+ 
+-    def __init__(self, repeated_digits: bool = False):
++    def __init__(self, repeated_digits: bool = True):
+         self.digits = list(range(10))
+         self.repeated_digits = repeated_digits
+ 
+</pre><h3>Mutant 13378</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -8,7 +8,7 @@
+     """Classe referente ao Cadastro de Pessoas Físicas (CPF)."""
+ 
+     def __init__(self, repeated_digits: bool = False):
+-        self.digits = list(range(10))
++        self.digits = list(range(11))
+         self.repeated_digits = repeated_digits
+ 
+     def validate(self, doc: str = '') -> bool:
+</pre><h3>Mutant 13379</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -8,7 +8,7 @@
+     """Classe referente ao Cadastro de Pessoas Físicas (CPF)."""
+ 
+     def __init__(self, repeated_digits: bool = False):
+-        self.digits = list(range(10))
++        self.digits = None
+         self.repeated_digits = repeated_digits
+ 
+     def validate(self, doc: str = '') -> bool:
+</pre><h3>Mutant 13380</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -9,7 +9,7 @@
+ 
+     def __init__(self, repeated_digits: bool = False):
+         self.digits = list(range(10))
+-        self.repeated_digits = repeated_digits
++        self.repeated_digits = None
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CPF."""
+</pre><h3>Mutant 13381</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -11,7 +11,7 @@
+         self.digits = list(range(10))
+         self.repeated_digits = repeated_digits
+ 
+-    def validate(self, doc: str = '') -> bool:
++    def validate(self, doc: str = 'XXXX') -> bool:
+         """Validar CPF."""
+         if not self._validate_input(doc, ['.', '-']):
+             return False
+</pre><h3>Mutant 13382</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -13,7 +13,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CPF."""
+-        if not self._validate_input(doc, ['.', '-']):
++        if  self._validate_input(doc, ['.', '-']):
+             return False
+ 
+         doc = list(self._only_digits(doc))
+</pre><h3>Mutant 13383</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -13,7 +13,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CPF."""
+-        if not self._validate_input(doc, ['.', '-']):
++        if not self._validate_input(doc, ['XX.XX', '-']):
+             return False
+ 
+         doc = list(self._only_digits(doc))
+</pre><h3>Mutant 13384</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -13,7 +13,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CPF."""
+-        if not self._validate_input(doc, ['.', '-']):
++        if not self._validate_input(doc, ['.', 'XX-XX']):
+             return False
+ 
+         doc = list(self._only_digits(doc))
+</pre><h3>Mutant 13385</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -14,7 +14,7 @@
+     def validate(self, doc: str = '') -> bool:
+         """Validar CPF."""
+         if not self._validate_input(doc, ['.', '-']):
+-            return False
++            return True
+ 
+         doc = list(self._only_digits(doc))
+ 
+</pre><h3>Mutant 13386</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -16,7 +16,7 @@
+         if not self._validate_input(doc, ['.', '-']):
+             return False
+ 
+-        doc = list(self._only_digits(doc))
++        doc = None
+ 
+         if len(doc) < 11:
+             doc = self._complete_with_zeros(doc)
+</pre><h3>Mutant 13387</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -18,7 +18,7 @@
+ 
+         doc = list(self._only_digits(doc))
+ 
+-        if len(doc) < 11:
++        if len(doc) <= 11:
+             doc = self._complete_with_zeros(doc)
+ 
+         if not self.repeated_digits and self._check_repeated_digits(doc):
+</pre><h3>Mutant 13388</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -18,7 +18,7 @@
+ 
+         doc = list(self._only_digits(doc))
+ 
+-        if len(doc) < 11:
++        if len(doc) < 12:
+             doc = self._complete_with_zeros(doc)
+ 
+         if not self.repeated_digits and self._check_repeated_digits(doc):
+</pre><h3>Mutant 13389</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -19,7 +19,7 @@
+         doc = list(self._only_digits(doc))
+ 
+         if len(doc) < 11:
+-            doc = self._complete_with_zeros(doc)
++            doc = None
+ 
+         if not self.repeated_digits and self._check_repeated_digits(doc):
+             return False
+</pre><h3>Mutant 13390</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -21,7 +21,7 @@
+         if len(doc) < 11:
+             doc = self._complete_with_zeros(doc)
+ 
+-        if not self.repeated_digits and self._check_repeated_digits(doc):
++        if  self.repeated_digits and self._check_repeated_digits(doc):
+             return False
+ 
+         return self._generate_first_digit(doc) == doc[9] \
+</pre><h3>Mutant 13391</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -21,7 +21,7 @@
+         if len(doc) < 11:
+             doc = self._complete_with_zeros(doc)
+ 
+-        if not self.repeated_digits and self._check_repeated_digits(doc):
++        if not self.repeated_digits or self._check_repeated_digits(doc):
+             return False
+ 
+         return self._generate_first_digit(doc) == doc[9] \
+</pre><h3>Mutant 13392</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -22,7 +22,7 @@
+             doc = self._complete_with_zeros(doc)
+ 
+         if not self.repeated_digits and self._check_repeated_digits(doc):
+-            return False
++            return True
+ 
+         return self._generate_first_digit(doc) == doc[9] \
+             and self._generate_second_digit(doc) == doc[10]
+</pre><h3>Mutant 13393</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -24,7 +24,7 @@
+         if not self.repeated_digits and self._check_repeated_digits(doc):
+             return False
+ 
+-        return self._generate_first_digit(doc) == doc[9] \
++        return self._generate_first_digit(doc) != doc[9] \
+             and self._generate_second_digit(doc) == doc[10]
+ 
+     def generate(self, mask: bool = False) -> str:
+</pre><h3>Mutant 13394</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -24,7 +24,7 @@
+         if not self.repeated_digits and self._check_repeated_digits(doc):
+             return False
+ 
+-        return self._generate_first_digit(doc) == doc[9] \
++        return self._generate_first_digit(doc) == doc[10] \
+             and self._generate_second_digit(doc) == doc[10]
+ 
+     def generate(self, mask: bool = False) -> str:
+</pre><h3>Mutant 13395</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -25,7 +25,7 @@
+             return False
+ 
+         return self._generate_first_digit(doc) == doc[9] \
+-            and self._generate_second_digit(doc) == doc[10]
++            and self._generate_second_digit(doc) != doc[10]
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CPF."""
+</pre><h3>Mutant 13396</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -25,7 +25,7 @@
+             return False
+ 
+         return self._generate_first_digit(doc) == doc[9] \
+-            and self._generate_second_digit(doc) == doc[10]
++            and self._generate_second_digit(doc) == doc[11]
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CPF."""
+</pre><h3>Mutant 13397</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -24,8 +24,7 @@
+         if not self.repeated_digits and self._check_repeated_digits(doc):
+             return False
+ 
+-        return self._generate_first_digit(doc) == doc[9] \
+-            and self._generate_second_digit(doc) == doc[10]
++        return self._generate_first_digit(doc) == doc[9] or self._generate_second_digit(doc) == doc[10]
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CPF."""
+</pre><h3>Mutant 13398</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -27,7 +27,7 @@
+         return self._generate_first_digit(doc) == doc[9] \
+             and self._generate_second_digit(doc) == doc[10]
+ 
+-    def generate(self, mask: bool = False) -> str:
++    def generate(self, mask: bool = True) -> str:
+         """Gerar CPF."""
+         # Os nove primeiros dígitos
+         cpf = [str(sample(self.digits, 1)[0]) for i in range(9)]
+</pre><h3>Mutant 13399</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -30,7 +30,7 @@
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CPF."""
+         # Os nove primeiros dígitos
+-        cpf = [str(sample(self.digits, 1)[0]) for i in range(9)]
++        cpf = [str(sample(self.digits, 2)[0]) for i in range(9)]
+ 
+         # Gerar os dígitos verificadores
+         cpf.append(self._generate_first_digit(cpf))
+</pre><h3>Mutant 13400</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -30,7 +30,7 @@
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CPF."""
+         # Os nove primeiros dígitos
+-        cpf = [str(sample(self.digits, 1)[0]) for i in range(9)]
++        cpf = [str(sample(self.digits, 1)[1]) for i in range(9)]
+ 
+         # Gerar os dígitos verificadores
+         cpf.append(self._generate_first_digit(cpf))
+</pre><h3>Mutant 13401</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -30,7 +30,7 @@
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CPF."""
+         # Os nove primeiros dígitos
+-        cpf = [str(sample(self.digits, 1)[0]) for i in range(9)]
++        cpf = [str(sample(self.digits, 1)[0]) for i in range(10)]
+ 
+         # Gerar os dígitos verificadores
+         cpf.append(self._generate_first_digit(cpf))
+</pre><h3>Mutant 13402</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -30,7 +30,7 @@
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CPF."""
+         # Os nove primeiros dígitos
+-        cpf = [str(sample(self.digits, 1)[0]) for i in range(9)]
++        cpf = None
+ 
+         # Gerar os dígitos verificadores
+         cpf.append(self._generate_first_digit(cpf))
+</pre><h3>Mutant 13403</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -36,7 +36,7 @@
+         cpf.append(self._generate_first_digit(cpf))
+         cpf.append(self._generate_second_digit(cpf))
+ 
+-        cpf = "".join(cpf)
++        cpf = "XXXX".join(cpf)
+ 
+         return self.mask(cpf) if mask else cpf
+ 
+</pre><h3>Mutant 13404</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -36,7 +36,7 @@
+         cpf.append(self._generate_first_digit(cpf))
+         cpf.append(self._generate_second_digit(cpf))
+ 
+-        cpf = "".join(cpf)
++        cpf = None
+ 
+         return self.mask(cpf) if mask else cpf
+ 
+</pre><h3>Mutant 13405</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -40,7 +40,7 @@
+ 
+         return self.mask(cpf) if mask else cpf
+ 
+-    def mask(self, doc: str = '') -> str:
++    def mask(self, doc: str = 'XXXX') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+         return f"{doc[:3]}.{doc[3:6]}.{doc[6:9]}-{doc[-2:]}"
+ 
+</pre><h3>Mutant 13406</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -42,7 +42,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]}.{doc[3:6]}.{doc[6:9]}-{doc[-2:]}"
++        return f"{doc[:4]}.{doc[3:6]}.{doc[6:9]}-{doc[-2:]}"
+ 
+     def _generate_first_digit(self, doc: list) -> str:
+         """Gerar o primeiro dígito verificador do CPF."""
+</pre><h3>Mutant 13407</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -42,7 +42,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]}.{doc[3:6]}.{doc[6:9]}-{doc[-2:]}"
++        return f"{doc[:3]}.{doc[4:6]}.{doc[6:9]}-{doc[-2:]}"
+ 
+     def _generate_first_digit(self, doc: list) -> str:
+         """Gerar o primeiro dígito verificador do CPF."""
+</pre><h3>Mutant 13408</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -42,7 +42,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]}.{doc[3:6]}.{doc[6:9]}-{doc[-2:]}"
++        return f"{doc[:3]}.{doc[3:7]}.{doc[6:9]}-{doc[-2:]}"
+ 
+     def _generate_first_digit(self, doc: list) -> str:
+         """Gerar o primeiro dígito verificador do CPF."""
+</pre><h3>Mutant 13409</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -42,7 +42,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]}.{doc[3:6]}.{doc[6:9]}-{doc[-2:]}"
++        return f"{doc[:3]}.{doc[3:6]}.{doc[7:9]}-{doc[-2:]}"
+ 
+     def _generate_first_digit(self, doc: list) -> str:
+         """Gerar o primeiro dígito verificador do CPF."""
+</pre><h3>Mutant 13410</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -42,7 +42,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]}.{doc[3:6]}.{doc[6:9]}-{doc[-2:]}"
++        return f"{doc[:3]}.{doc[3:6]}.{doc[6:10]}-{doc[-2:]}"
+ 
+     def _generate_first_digit(self, doc: list) -> str:
+         """Gerar o primeiro dígito verificador do CPF."""
+</pre><h3>Mutant 13411</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -42,7 +42,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]}.{doc[3:6]}.{doc[6:9]}-{doc[-2:]}"
++        return f"{doc[:3]}.{doc[3:6]}.{doc[6:9]}-{doc[+2:]}"
+ 
+     def _generate_first_digit(self, doc: list) -> str:
+         """Gerar o primeiro dígito verificador do CPF."""
+</pre><h3>Mutant 13412</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -42,7 +42,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]}.{doc[3:6]}.{doc[6:9]}-{doc[-2:]}"
++        return f"{doc[:3]}.{doc[3:6]}.{doc[6:9]}-{doc[-3:]}"
+ 
+     def _generate_first_digit(self, doc: list) -> str:
+         """Gerar o primeiro dígito verificador do CPF."""
+</pre><h3>Mutant 13413</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -42,7 +42,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CPF na variável doc."""
+-        return f"{doc[:3]}.{doc[3:6]}.{doc[6:9]}-{doc[-2:]}"
++        return f"XX{doc[:3]}.{doc[3:6]}.{doc[6:9]}-{doc[-2:]}XX"
+ 
+     def _generate_first_digit(self, doc: list) -> str:
+         """Gerar o primeiro dígito verificador do CPF."""
+</pre><h3>Mutant 13414</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -46,7 +46,7 @@
+ 
+     def _generate_first_digit(self, doc: list) -> str:
+         """Gerar o primeiro dígito verificador do CPF."""
+-        sum = 0
++        sum = 1
+ 
+         for i in range(10, 1, -1):
+             sum += int(doc[10 - i]) * i
+</pre><h3>Mutant 13415</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -46,7 +46,7 @@
+ 
+     def _generate_first_digit(self, doc: list) -> str:
+         """Gerar o primeiro dígito verificador do CPF."""
+-        sum = 0
++        sum = None
+ 
+         for i in range(10, 1, -1):
+             sum += int(doc[10 - i]) * i
+</pre><h3>Mutant 13416</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -48,7 +48,7 @@
+         """Gerar o primeiro dígito verificador do CPF."""
+         sum = 0
+ 
+-        for i in range(10, 1, -1):
++        for i in range(11, 1, -1):
+             sum += int(doc[10 - i]) * i
+ 
+         sum = (sum * 10) % 11
+</pre><h3>Mutant 13417</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -48,7 +48,7 @@
+         """Gerar o primeiro dígito verificador do CPF."""
+         sum = 0
+ 
+-        for i in range(10, 1, -1):
++        for i in range(10, 2, -1):
+             sum += int(doc[10 - i]) * i
+ 
+         sum = (sum * 10) % 11
+</pre><h3>Mutant 13418</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -48,7 +48,7 @@
+         """Gerar o primeiro dígito verificador do CPF."""
+         sum = 0
+ 
+-        for i in range(10, 1, -1):
++        for i in range(10, 1, +1):
+             sum += int(doc[10 - i]) * i
+ 
+         sum = (sum * 10) % 11
+</pre><h3>Mutant 13419</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -48,7 +48,7 @@
+         """Gerar o primeiro dígito verificador do CPF."""
+         sum = 0
+ 
+-        for i in range(10, 1, -1):
++        for i in range(10, 1, -2):
+             sum += int(doc[10 - i]) * i
+ 
+         sum = (sum * 10) % 11
+</pre><h3>Mutant 13420</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -49,7 +49,7 @@
+         sum = 0
+ 
+         for i in range(10, 1, -1):
+-            sum += int(doc[10 - i]) * i
++            sum = int(doc[10 - i]) * i
+ 
+         sum = (sum * 10) % 11
+ 
+</pre><h3>Mutant 13421</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -49,7 +49,7 @@
+         sum = 0
+ 
+         for i in range(10, 1, -1):
+-            sum += int(doc[10 - i]) * i
++            sum -= int(doc[10 - i]) * i
+ 
+         sum = (sum * 10) % 11
+ 
+</pre><h3>Mutant 13422</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -49,7 +49,7 @@
+         sum = 0
+ 
+         for i in range(10, 1, -1):
+-            sum += int(doc[10 - i]) * i
++            sum += int(doc[11 - i]) * i
+ 
+         sum = (sum * 10) % 11
+ 
+</pre><h3>Mutant 13423</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -49,7 +49,7 @@
+         sum = 0
+ 
+         for i in range(10, 1, -1):
+-            sum += int(doc[10 - i]) * i
++            sum += int(doc[10 + i]) * i
+ 
+         sum = (sum * 10) % 11
+ 
+</pre><h3>Mutant 13424</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -49,7 +49,7 @@
+         sum = 0
+ 
+         for i in range(10, 1, -1):
+-            sum += int(doc[10 - i]) * i
++            sum += int(doc[10 - i]) / i
+ 
+         sum = (sum * 10) % 11
+ 
+</pre><h3>Mutant 13425</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -51,7 +51,7 @@
+         for i in range(10, 1, -1):
+             sum += int(doc[10 - i]) * i
+ 
+-        sum = (sum * 10) % 11
++        sum = (sum / 10) % 11
+ 
+         if sum == 10:
+             sum = 0
+</pre><h3>Mutant 13426</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -51,7 +51,7 @@
+         for i in range(10, 1, -1):
+             sum += int(doc[10 - i]) * i
+ 
+-        sum = (sum * 10) % 11
++        sum = (sum * 11) % 11
+ 
+         if sum == 10:
+             sum = 0
+</pre><h3>Mutant 13427</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -51,7 +51,7 @@
+         for i in range(10, 1, -1):
+             sum += int(doc[10 - i]) * i
+ 
+-        sum = (sum * 10) % 11
++        sum = (sum * 10) / 11
+ 
+         if sum == 10:
+             sum = 0
+</pre><h3>Mutant 13428</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -51,7 +51,7 @@
+         for i in range(10, 1, -1):
+             sum += int(doc[10 - i]) * i
+ 
+-        sum = (sum * 10) % 11
++        sum = (sum * 10) % 12
+ 
+         if sum == 10:
+             sum = 0
+</pre><h3>Mutant 13429</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -51,7 +51,7 @@
+         for i in range(10, 1, -1):
+             sum += int(doc[10 - i]) * i
+ 
+-        sum = (sum * 10) % 11
++        sum = None
+ 
+         if sum == 10:
+             sum = 0
+</pre><h3>Mutant 13430</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -53,7 +53,7 @@
+ 
+         sum = (sum * 10) % 11
+ 
+-        if sum == 10:
++        if sum != 10:
+             sum = 0
+ 
+         return str(sum)
+</pre><h3>Mutant 13431</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -53,7 +53,7 @@
+ 
+         sum = (sum * 10) % 11
+ 
+-        if sum == 10:
++        if sum == 11:
+             sum = 0
+ 
+         return str(sum)
+</pre><h3>Mutant 13432</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -54,7 +54,7 @@
+         sum = (sum * 10) % 11
+ 
+         if sum == 10:
+-            sum = 0
++            sum = 1
+ 
+         return str(sum)
+ 
+</pre><h3>Mutant 13433</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -54,7 +54,7 @@
+         sum = (sum * 10) % 11
+ 
+         if sum == 10:
+-            sum = 0
++            sum = None
+ 
+         return str(sum)
+ 
+</pre><h3>Mutant 13434</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -60,7 +60,7 @@
+ 
+     def _generate_second_digit(self, doc: list) -> str:
+         """Gerar o segundo dígito verificador do CPF."""
+-        sum = 0
++        sum = 1
+ 
+         for i in range(11, 1, -1):
+             sum += int(doc[11 - i]) * i
+</pre><h3>Mutant 13435</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -60,7 +60,7 @@
+ 
+     def _generate_second_digit(self, doc: list) -> str:
+         """Gerar o segundo dígito verificador do CPF."""
+-        sum = 0
++        sum = None
+ 
+         for i in range(11, 1, -1):
+             sum += int(doc[11 - i]) * i
+</pre><h3>Mutant 13436</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -62,7 +62,7 @@
+         """Gerar o segundo dígito verificador do CPF."""
+         sum = 0
+ 
+-        for i in range(11, 1, -1):
++        for i in range(12, 1, -1):
+             sum += int(doc[11 - i]) * i
+ 
+         sum = (sum * 10) % 11
+</pre><h3>Mutant 13437</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -62,7 +62,7 @@
+         """Gerar o segundo dígito verificador do CPF."""
+         sum = 0
+ 
+-        for i in range(11, 1, -1):
++        for i in range(11, 2, -1):
+             sum += int(doc[11 - i]) * i
+ 
+         sum = (sum * 10) % 11
+</pre><h3>Mutant 13438</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -62,7 +62,7 @@
+         """Gerar o segundo dígito verificador do CPF."""
+         sum = 0
+ 
+-        for i in range(11, 1, -1):
++        for i in range(11, 1, +1):
+             sum += int(doc[11 - i]) * i
+ 
+         sum = (sum * 10) % 11
+</pre><h3>Mutant 13439</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -62,7 +62,7 @@
+         """Gerar o segundo dígito verificador do CPF."""
+         sum = 0
+ 
+-        for i in range(11, 1, -1):
++        for i in range(11, 1, -2):
+             sum += int(doc[11 - i]) * i
+ 
+         sum = (sum * 10) % 11
+</pre><h3>Mutant 13440</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -63,7 +63,7 @@
+         sum = 0
+ 
+         for i in range(11, 1, -1):
+-            sum += int(doc[11 - i]) * i
++            sum = int(doc[11 - i]) * i
+ 
+         sum = (sum * 10) % 11
+ 
+</pre><h3>Mutant 13441</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -63,7 +63,7 @@
+         sum = 0
+ 
+         for i in range(11, 1, -1):
+-            sum += int(doc[11 - i]) * i
++            sum -= int(doc[11 - i]) * i
+ 
+         sum = (sum * 10) % 11
+ 
+</pre><h3>Mutant 13442</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -63,7 +63,7 @@
+         sum = 0
+ 
+         for i in range(11, 1, -1):
+-            sum += int(doc[11 - i]) * i
++            sum += int(doc[12 - i]) * i
+ 
+         sum = (sum * 10) % 11
+ 
+</pre><h3>Mutant 13443</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -63,7 +63,7 @@
+         sum = 0
+ 
+         for i in range(11, 1, -1):
+-            sum += int(doc[11 - i]) * i
++            sum += int(doc[11 + i]) * i
+ 
+         sum = (sum * 10) % 11
+ 
+</pre><h3>Mutant 13444</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -63,7 +63,7 @@
+         sum = 0
+ 
+         for i in range(11, 1, -1):
+-            sum += int(doc[11 - i]) * i
++            sum += int(doc[11 - i]) / i
+ 
+         sum = (sum * 10) % 11
+ 
+</pre><h3>Mutant 13445</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -65,7 +65,7 @@
+         for i in range(11, 1, -1):
+             sum += int(doc[11 - i]) * i
+ 
+-        sum = (sum * 10) % 11
++        sum = (sum / 10) % 11
+ 
+         if sum == 10:
+             sum = 0
+</pre><h3>Mutant 13446</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -65,7 +65,7 @@
+         for i in range(11, 1, -1):
+             sum += int(doc[11 - i]) * i
+ 
+-        sum = (sum * 10) % 11
++        sum = (sum * 11) % 11
+ 
+         if sum == 10:
+             sum = 0
+</pre><h3>Mutant 13447</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -65,7 +65,7 @@
+         for i in range(11, 1, -1):
+             sum += int(doc[11 - i]) * i
+ 
+-        sum = (sum * 10) % 11
++        sum = (sum * 10) / 11
+ 
+         if sum == 10:
+             sum = 0
+</pre><h3>Mutant 13448</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -65,7 +65,7 @@
+         for i in range(11, 1, -1):
+             sum += int(doc[11 - i]) * i
+ 
+-        sum = (sum * 10) % 11
++        sum = (sum * 10) % 12
+ 
+         if sum == 10:
+             sum = 0
+</pre><h3>Mutant 13449</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -65,7 +65,7 @@
+         for i in range(11, 1, -1):
+             sum += int(doc[11 - i]) * i
+ 
+-        sum = (sum * 10) % 11
++        sum = None
+ 
+         if sum == 10:
+             sum = 0
+</pre><h3>Mutant 13450</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -67,7 +67,7 @@
+ 
+         sum = (sum * 10) % 11
+ 
+-        if sum == 10:
++        if sum != 10:
+             sum = 0
+ 
+         return str(sum)
+</pre><h3>Mutant 13451</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -67,7 +67,7 @@
+ 
+         sum = (sum * 10) % 11
+ 
+-        if sum == 10:
++        if sum == 11:
+             sum = 0
+ 
+         return str(sum)
+</pre><h3>Mutant 13452</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -68,7 +68,7 @@
+         sum = (sum * 10) % 11
+ 
+         if sum == 10:
+-            sum = 0
++            sum = 1
+ 
+         return str(sum)
+ 
+</pre><h3>Mutant 13453</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -68,7 +68,7 @@
+         sum = (sum * 10) % 11
+ 
+         if sum == 10:
+-            sum = 0
++            sum = None
+ 
+         return str(sum)
+ 
+</pre><h3>Mutant 13454</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -75,7 +75,7 @@
+     def _check_repeated_digits(self, doc: List[str]) -> bool:
+         """Verifica se é um CPF com números repetidos.
+         Exemplo: 111.111.111-11"""
+-        return len(set(doc)) == 1
++        return len(set(doc)) != 1
+ 
+     def _complete_with_zeros(self, doc: str) -> list[str]:
+         """Adiciona zeros à esquerda para completar o CPF."""
+</pre><h3>Mutant 13455</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -75,7 +75,7 @@
+     def _check_repeated_digits(self, doc: List[str]) -> bool:
+         """Verifica se é um CPF com números repetidos.
+         Exemplo: 111.111.111-11"""
+-        return len(set(doc)) == 1
++        return len(set(doc)) == 2
+ 
+     def _complete_with_zeros(self, doc: str) -> list[str]:
+         """Adiciona zeros à esquerda para completar o CPF."""
+</pre><h3>Mutant 13456</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -79,6 +79,6 @@
+ 
+     def _complete_with_zeros(self, doc: str) -> list[str]:
+         """Adiciona zeros à esquerda para completar o CPF."""
+-        zeros_needed = 11 - len(doc)
++        zeros_needed = 12 - len(doc)
+         return ['0'] * zeros_needed + doc
+ 
+</pre><h3>Mutant 13457</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -79,6 +79,6 @@
+ 
+     def _complete_with_zeros(self, doc: str) -> list[str]:
+         """Adiciona zeros à esquerda para completar o CPF."""
+-        zeros_needed = 11 - len(doc)
++        zeros_needed = 11 + len(doc)
+         return ['0'] * zeros_needed + doc
+ 
+</pre><h3>Mutant 13458</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -79,6 +79,6 @@
+ 
+     def _complete_with_zeros(self, doc: str) -> list[str]:
+         """Adiciona zeros à esquerda para completar o CPF."""
+-        zeros_needed = 11 - len(doc)
++        zeros_needed = None
+         return ['0'] * zeros_needed + doc
+ 
+</pre><h3>Mutant 13459</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -80,5 +80,5 @@
+     def _complete_with_zeros(self, doc: str) -> list[str]:
+         """Adiciona zeros à esquerda para completar o CPF."""
+         zeros_needed = 11 - len(doc)
+-        return ['0'] * zeros_needed + doc
++        return ['XX0XX'] * zeros_needed + doc
+ 
+</pre><h3>Mutant 13460</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -80,5 +80,5 @@
+     def _complete_with_zeros(self, doc: str) -> list[str]:
+         """Adiciona zeros à esquerda para completar o CPF."""
+         zeros_needed = 11 - len(doc)
+-        return ['0'] * zeros_needed + doc
++        return ['0'] / zeros_needed + doc
+ 
+</pre><h3>Mutant 13461</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CPF.py
+@@ -80,5 +80,5 @@
+     def _complete_with_zeros(self, doc: str) -> list[str]:
+         """Adiciona zeros à esquerda para completar o CPF."""
+         zeros_needed = 11 - len(doc)
+-        return ['0'] * zeros_needed + doc
++        return ['0'] * zeros_needed - doc
+ 
+</pre></body></html>

@@ -1,0 +1,657 @@
+<html><body><h1>C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py</h1>Killed 0 out of 60 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 13471</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -8,7 +8,7 @@
+     """Classe referente ao PIS/NIS/PASEP/NIT."""
+ 
+     def __init__(self):
+-        self.digits = list(range(10))
++        self.digits = list(range(11))
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar PIS/NIS/PASEP/NIT."""
+</pre><h3>Mutant 13472</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -8,7 +8,7 @@
+     """Classe referente ao PIS/NIS/PASEP/NIT."""
+ 
+     def __init__(self):
+-        self.digits = list(range(10))
++        self.digits = None
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar PIS/NIS/PASEP/NIT."""
+</pre><h3>Mutant 13473</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -10,7 +10,7 @@
+     def __init__(self):
+         self.digits = list(range(10))
+ 
+-    def validate(self, doc: str = '') -> bool:
++    def validate(self, doc: str = 'XXXX') -> bool:
+         """Validar PIS/NIS/PASEP/NIT."""
+         if not self._validate_input(doc, ['.', '-']):
+             return False
+</pre><h3>Mutant 13474</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -12,7 +12,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar PIS/NIS/PASEP/NIT."""
+-        if not self._validate_input(doc, ['.', '-']):
++        if  self._validate_input(doc, ['.', '-']):
+             return False
+ 
+         doc = self._only_digits(doc)
+</pre><h3>Mutant 13475</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -12,7 +12,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar PIS/NIS/PASEP/NIT."""
+-        if not self._validate_input(doc, ['.', '-']):
++        if not self._validate_input(doc, ['XX.XX', '-']):
+             return False
+ 
+         doc = self._only_digits(doc)
+</pre><h3>Mutant 13476</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -12,7 +12,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar PIS/NIS/PASEP/NIT."""
+-        if not self._validate_input(doc, ['.', '-']):
++        if not self._validate_input(doc, ['.', 'XX-XX']):
+             return False
+ 
+         doc = self._only_digits(doc)
+</pre><h3>Mutant 13477</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -13,7 +13,7 @@
+     def validate(self, doc: str = '') -> bool:
+         """Validar PIS/NIS/PASEP/NIT."""
+         if not self._validate_input(doc, ['.', '-']):
+-            return False
++            return True
+ 
+         doc = self._only_digits(doc)
+ 
+</pre><h3>Mutant 13478</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -15,7 +15,7 @@
+         if not self._validate_input(doc, ['.', '-']):
+             return False
+ 
+-        doc = self._only_digits(doc)
++        doc = None
+ 
+         if len(doc) != 11 or self._is_repeated_digits(doc):
+             return False
+</pre><h3>Mutant 13479</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -17,7 +17,7 @@
+ 
+         doc = self._only_digits(doc)
+ 
+-        if len(doc) != 11 or self._is_repeated_digits(doc):
++        if len(doc) == 11 or self._is_repeated_digits(doc):
+             return False
+ 
+         digit = self._generate_digit(doc)
+</pre><h3>Mutant 13480</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -17,7 +17,7 @@
+ 
+         doc = self._only_digits(doc)
+ 
+-        if len(doc) != 11 or self._is_repeated_digits(doc):
++        if len(doc) != 12 or self._is_repeated_digits(doc):
+             return False
+ 
+         digit = self._generate_digit(doc)
+</pre><h3>Mutant 13481</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -17,7 +17,7 @@
+ 
+         doc = self._only_digits(doc)
+ 
+-        if len(doc) != 11 or self._is_repeated_digits(doc):
++        if len(doc) != 11 and self._is_repeated_digits(doc):
+             return False
+ 
+         digit = self._generate_digit(doc)
+</pre><h3>Mutant 13482</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -18,7 +18,7 @@
+         doc = self._only_digits(doc)
+ 
+         if len(doc) != 11 or self._is_repeated_digits(doc):
+-            return False
++            return True
+ 
+         digit = self._generate_digit(doc)
+ 
+</pre><h3>Mutant 13483</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -20,7 +20,7 @@
+         if len(doc) != 11 or self._is_repeated_digits(doc):
+             return False
+ 
+-        digit = self._generate_digit(doc)
++        digit = None
+ 
+         return digit == doc[10]
+ 
+</pre><h3>Mutant 13484</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -22,7 +22,7 @@
+ 
+         digit = self._generate_digit(doc)
+ 
+-        return digit == doc[10]
++        return digit != doc[10]
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar PIS/NIS/PASEP/NIT."""
+</pre><h3>Mutant 13485</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -22,7 +22,7 @@
+ 
+         digit = self._generate_digit(doc)
+ 
+-        return digit == doc[10]
++        return digit == doc[11]
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar PIS/NIS/PASEP/NIT."""
+</pre><h3>Mutant 13486</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -24,7 +24,7 @@
+ 
+         return digit == doc[10]
+ 
+-    def generate(self, mask: bool = False) -> str:
++    def generate(self, mask: bool = True) -> str:
+         """Gerar PIS/NIS/PASEP/NIT."""
+         pis = [str(sample(self.digits, 1)[0]) for i in range(10)]
+         pis.append(self._generate_digit(pis))
+</pre><h3>Mutant 13487</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -26,7 +26,7 @@
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar PIS/NIS/PASEP/NIT."""
+-        pis = [str(sample(self.digits, 1)[0]) for i in range(10)]
++        pis = [str(sample(self.digits, 2)[0]) for i in range(10)]
+         pis.append(self._generate_digit(pis))
+ 
+         pis = ''.join(pis)
+</pre><h3>Mutant 13488</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -26,7 +26,7 @@
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar PIS/NIS/PASEP/NIT."""
+-        pis = [str(sample(self.digits, 1)[0]) for i in range(10)]
++        pis = [str(sample(self.digits, 1)[1]) for i in range(10)]
+         pis.append(self._generate_digit(pis))
+ 
+         pis = ''.join(pis)
+</pre><h3>Mutant 13489</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -26,7 +26,7 @@
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar PIS/NIS/PASEP/NIT."""
+-        pis = [str(sample(self.digits, 1)[0]) for i in range(10)]
++        pis = [str(sample(self.digits, 1)[0]) for i in range(11)]
+         pis.append(self._generate_digit(pis))
+ 
+         pis = ''.join(pis)
+</pre><h3>Mutant 13490</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -26,7 +26,7 @@
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar PIS/NIS/PASEP/NIT."""
+-        pis = [str(sample(self.digits, 1)[0]) for i in range(10)]
++        pis = None
+         pis.append(self._generate_digit(pis))
+ 
+         pis = ''.join(pis)
+</pre><h3>Mutant 13491</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -29,7 +29,7 @@
+         pis = [str(sample(self.digits, 1)[0]) for i in range(10)]
+         pis.append(self._generate_digit(pis))
+ 
+-        pis = ''.join(pis)
++        pis = 'XXXX'.join(pis)
+         return self.mask(pis) if mask else pis
+ 
+     def mask(self, doc: str = '') -> str:
+</pre><h3>Mutant 13492</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -29,7 +29,7 @@
+         pis = [str(sample(self.digits, 1)[0]) for i in range(10)]
+         pis.append(self._generate_digit(pis))
+ 
+-        pis = ''.join(pis)
++        pis = None
+         return self.mask(pis) if mask else pis
+ 
+     def mask(self, doc: str = '') -> str:
+</pre><h3>Mutant 13493</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -32,7 +32,7 @@
+         pis = ''.join(pis)
+         return self.mask(pis) if mask else pis
+ 
+-    def mask(self, doc: str = '') -> str:
++    def mask(self, doc: str = 'XXXX') -> str:
+         """Coloca a máscara de PIS/NIS/PASEP/NIT na variável doc."""
+         return f"{doc[:3]}.{doc[3:8]}.{doc[8:10]}-{doc[10:]}"
+ 
+</pre><h3>Mutant 13494</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -34,7 +34,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de PIS/NIS/PASEP/NIT na variável doc."""
+-        return f"{doc[:3]}.{doc[3:8]}.{doc[8:10]}-{doc[10:]}"
++        return f"{doc[:4]}.{doc[3:8]}.{doc[8:10]}-{doc[10:]}"
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+</pre><h3>Mutant 13495</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -34,7 +34,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de PIS/NIS/PASEP/NIT na variável doc."""
+-        return f"{doc[:3]}.{doc[3:8]}.{doc[8:10]}-{doc[10:]}"
++        return f"{doc[:3]}.{doc[4:8]}.{doc[8:10]}-{doc[10:]}"
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+</pre><h3>Mutant 13496</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -34,7 +34,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de PIS/NIS/PASEP/NIT na variável doc."""
+-        return f"{doc[:3]}.{doc[3:8]}.{doc[8:10]}-{doc[10:]}"
++        return f"{doc[:3]}.{doc[3:9]}.{doc[8:10]}-{doc[10:]}"
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+</pre><h3>Mutant 13497</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -34,7 +34,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de PIS/NIS/PASEP/NIT na variável doc."""
+-        return f"{doc[:3]}.{doc[3:8]}.{doc[8:10]}-{doc[10:]}"
++        return f"{doc[:3]}.{doc[3:8]}.{doc[9:10]}-{doc[10:]}"
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+</pre><h3>Mutant 13498</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -34,7 +34,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de PIS/NIS/PASEP/NIT na variável doc."""
+-        return f"{doc[:3]}.{doc[3:8]}.{doc[8:10]}-{doc[10:]}"
++        return f"{doc[:3]}.{doc[3:8]}.{doc[8:11]}-{doc[10:]}"
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+</pre><h3>Mutant 13499</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -34,7 +34,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de PIS/NIS/PASEP/NIT na variável doc."""
+-        return f"{doc[:3]}.{doc[3:8]}.{doc[8:10]}-{doc[10:]}"
++        return f"{doc[:3]}.{doc[3:8]}.{doc[8:10]}-{doc[11:]}"
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+</pre><h3>Mutant 13500</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -34,7 +34,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de PIS/NIS/PASEP/NIT na variável doc."""
+-        return f"{doc[:3]}.{doc[3:8]}.{doc[8:10]}-{doc[10:]}"
++        return f"XX{doc[:3]}.{doc[3:8]}.{doc[8:10]}-{doc[10:]}XX"
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+</pre><h3>Mutant 13501</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -38,7 +38,7 @@
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+-        multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
++        multipliers = [4, 2, 9, 8, 7, 6, 5, 4, 3, 2]
+         summation = 0
+ 
+         for position in range(0, 10):
+</pre><h3>Mutant 13502</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -38,7 +38,7 @@
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+-        multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
++        multipliers = [3, 3, 9, 8, 7, 6, 5, 4, 3, 2]
+         summation = 0
+ 
+         for position in range(0, 10):
+</pre><h3>Mutant 13503</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -38,7 +38,7 @@
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+-        multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
++        multipliers = [3, 2, 10, 8, 7, 6, 5, 4, 3, 2]
+         summation = 0
+ 
+         for position in range(0, 10):
+</pre><h3>Mutant 13504</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -38,7 +38,7 @@
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+-        multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
++        multipliers = [3, 2, 9, 9, 7, 6, 5, 4, 3, 2]
+         summation = 0
+ 
+         for position in range(0, 10):
+</pre><h3>Mutant 13505</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -38,7 +38,7 @@
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+-        multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
++        multipliers = [3, 2, 9, 8, 8, 6, 5, 4, 3, 2]
+         summation = 0
+ 
+         for position in range(0, 10):
+</pre><h3>Mutant 13506</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -38,7 +38,7 @@
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+-        multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
++        multipliers = [3, 2, 9, 8, 7, 7, 5, 4, 3, 2]
+         summation = 0
+ 
+         for position in range(0, 10):
+</pre><h3>Mutant 13507</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -38,7 +38,7 @@
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+-        multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
++        multipliers = [3, 2, 9, 8, 7, 6, 6, 4, 3, 2]
+         summation = 0
+ 
+         for position in range(0, 10):
+</pre><h3>Mutant 13508</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -38,7 +38,7 @@
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+-        multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
++        multipliers = [3, 2, 9, 8, 7, 6, 5, 5, 3, 2]
+         summation = 0
+ 
+         for position in range(0, 10):
+</pre><h3>Mutant 13509</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -38,7 +38,7 @@
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+-        multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
++        multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 4, 2]
+         summation = 0
+ 
+         for position in range(0, 10):
+</pre><h3>Mutant 13510</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -38,7 +38,7 @@
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+-        multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
++        multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 3]
+         summation = 0
+ 
+         for position in range(0, 10):
+</pre><h3>Mutant 13511</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -38,7 +38,7 @@
+ 
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+-        multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
++        multipliers = None
+         summation = 0
+ 
+         for position in range(0, 10):
+</pre><h3>Mutant 13512</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -39,7 +39,7 @@
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+         multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
+-        summation = 0
++        summation = 1
+ 
+         for position in range(0, 10):
+             summation += int(doc[position]) * multipliers[position]
+</pre><h3>Mutant 13513</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -39,7 +39,7 @@
+     def _generate_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o dígito verificador do PIS/NIS/PASEP/NIT."""
+         multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
+-        summation = 0
++        summation = None
+ 
+         for position in range(0, 10):
+             summation += int(doc[position]) * multipliers[position]
+</pre><h3>Mutant 13514</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -41,7 +41,7 @@
+         multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
+         summation = 0
+ 
+-        for position in range(0, 10):
++        for position in range(1, 10):
+             summation += int(doc[position]) * multipliers[position]
+         
+         module = summation % 11
+</pre><h3>Mutant 13515</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -41,7 +41,7 @@
+         multipliers = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
+         summation = 0
+ 
+-        for position in range(0, 10):
++        for position in range(0, 11):
+             summation += int(doc[position]) * multipliers[position]
+         
+         module = summation % 11
+</pre><h3>Mutant 13516</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -42,7 +42,7 @@
+         summation = 0
+ 
+         for position in range(0, 10):
+-            summation += int(doc[position]) * multipliers[position]
++            summation = int(doc[position]) * multipliers[position]
+         
+         module = summation % 11
+         digit = 0
+</pre><h3>Mutant 13517</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -42,7 +42,7 @@
+         summation = 0
+ 
+         for position in range(0, 10):
+-            summation += int(doc[position]) * multipliers[position]
++            summation -= int(doc[position]) * multipliers[position]
+         
+         module = summation % 11
+         digit = 0
+</pre><h3>Mutant 13518</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -42,7 +42,7 @@
+         summation = 0
+ 
+         for position in range(0, 10):
+-            summation += int(doc[position]) * multipliers[position]
++            summation += int(doc[position]) / multipliers[position]
+         
+         module = summation % 11
+         digit = 0
+</pre><h3>Mutant 13519</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -44,7 +44,7 @@
+         for position in range(0, 10):
+             summation += int(doc[position]) * multipliers[position]
+         
+-        module = summation % 11
++        module = summation / 11
+         digit = 0
+ 
+         if module >= 2:
+</pre><h3>Mutant 13520</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -44,7 +44,7 @@
+         for position in range(0, 10):
+             summation += int(doc[position]) * multipliers[position]
+         
+-        module = summation % 11
++        module = summation % 12
+         digit = 0
+ 
+         if module >= 2:
+</pre><h3>Mutant 13521</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -44,7 +44,7 @@
+         for position in range(0, 10):
+             summation += int(doc[position]) * multipliers[position]
+         
+-        module = summation % 11
++        module = None
+         digit = 0
+ 
+         if module >= 2:
+</pre><h3>Mutant 13522</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -45,7 +45,7 @@
+             summation += int(doc[position]) * multipliers[position]
+         
+         module = summation % 11
+-        digit = 0
++        digit = 1
+ 
+         if module >= 2:
+             digit = 11 - module
+</pre><h3>Mutant 13523</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -45,7 +45,7 @@
+             summation += int(doc[position]) * multipliers[position]
+         
+         module = summation % 11
+-        digit = 0
++        digit = None
+ 
+         if module >= 2:
+             digit = 11 - module
+</pre><h3>Mutant 13524</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -47,7 +47,7 @@
+         module = summation % 11
+         digit = 0
+ 
+-        if module >= 2:
++        if module > 2:
+             digit = 11 - module
+ 
+         return str(digit)
+</pre><h3>Mutant 13525</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -47,7 +47,7 @@
+         module = summation % 11
+         digit = 0
+ 
+-        if module >= 2:
++        if module >= 3:
+             digit = 11 - module
+ 
+         return str(digit)
+</pre><h3>Mutant 13526</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -48,7 +48,7 @@
+         digit = 0
+ 
+         if module >= 2:
+-            digit = 11 - module
++            digit = 12 - module
+ 
+         return str(digit)
+ 
+</pre><h3>Mutant 13527</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -48,7 +48,7 @@
+         digit = 0
+ 
+         if module >= 2:
+-            digit = 11 - module
++            digit = 11 + module
+ 
+         return str(digit)
+ 
+</pre><h3>Mutant 13528</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -48,7 +48,7 @@
+         digit = 0
+ 
+         if module >= 2:
+-            digit = 11 - module
++            digit = None
+ 
+         return str(digit)
+ 
+</pre><h3>Mutant 13529</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -55,5 +55,5 @@
+     def _is_repeated_digits(self, doc: str) -> bool:
+         """Verifica se o PIS/NIS/PASEP/NIT contém com números repetidos.
+         Exemplo: 11111111111"""
+-        return len(set(doc)) == 1
++        return len(set(doc)) != 1
+ 
+</pre><h3>Mutant 13530</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\PIS.py
+@@ -55,5 +55,5 @@
+     def _is_repeated_digits(self, doc: str) -> bool:
+         """Verifica se o PIS/NIS/PASEP/NIT contém com números repetidos.
+         Exemplo: 11111111111"""
+-        return len(set(doc)) == 1
++        return len(set(doc)) == 2
+ 
+</pre></body></html>

@@ -1,0 +1,381 @@
+<html><body><h1>C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py</h1>Killed 0 out of 35 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 12950</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -5,7 +5,6 @@
+ class BaseDoc(ABC):
+     """Classe base para todas as classes referentes a documentos."""
+ 
+-    @abstractmethod
+     def validate(self, doc: str = '') -> bool:
+         """Método para validar o documento desejado."""
+         pass
+</pre><h3>Mutant 12951</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -6,7 +6,7 @@
+     """Classe base para todas as classes referentes a documentos."""
+ 
+     @abstractmethod
+-    def validate(self, doc: str = '') -> bool:
++    def validate(self, doc: str = 'XXXX') -> bool:
+         """Método para validar o documento desejado."""
+         pass
+ 
+</pre><h3>Mutant 12952</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -14,7 +14,6 @@
+         """Método para validar uma lista de documentos desejado."""
+         return [self.validate(doc) for doc in docs]
+ 
+-    @abstractmethod
+     def generate(self, mask: bool = False) -> str:
+         """Método para gerar um documento válido."""
+         pass
+</pre><h3>Mutant 12953</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -15,7 +15,7 @@
+         return [self.validate(doc) for doc in docs]
+ 
+     @abstractmethod
+-    def generate(self, mask: bool = False) -> str:
++    def generate(self, mask: bool = True) -> str:
+         """Método para gerar um documento válido."""
+         pass
+ 
+</pre><h3>Mutant 12954</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -21,7 +21,7 @@
+ 
+     def generate_list(
+         self,
+-        n: int = 1,
++        n: int = 2,
+         mask: bool = False,
+         repeat: bool = False
+     ) -> list:
+</pre><h3>Mutant 12955</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -22,7 +22,7 @@
+     def generate_list(
+         self,
+         n: int = 1,
+-        mask: bool = False,
++        mask: bool = True,
+         repeat: bool = False
+     ) -> list:
+         """Gerar uma lista do mesmo documento."""
+</pre><h3>Mutant 12956</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -23,7 +23,7 @@
+         self,
+         n: int = 1,
+         mask: bool = False,
+-        repeat: bool = False
++        repeat: bool = True
+     ) -> list:
+         """Gerar uma lista do mesmo documento."""
+         doc_list = []
+</pre><h3>Mutant 12957</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -26,7 +26,7 @@
+         repeat: bool = False
+     ) -> list:
+         """Gerar uma lista do mesmo documento."""
+-        doc_list = []
++        doc_list = None
+ 
+         if n <= 0:
+             return doc_list
+</pre><h3>Mutant 12958</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -28,7 +28,7 @@
+         """Gerar uma lista do mesmo documento."""
+         doc_list = []
+ 
+-        if n <= 0:
++        if n < 0:
+             return doc_list
+ 
+         for _ in range(n):
+</pre><h3>Mutant 12959</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -28,7 +28,7 @@
+         """Gerar uma lista do mesmo documento."""
+         doc_list = []
+ 
+-        if n <= 0:
++        if n <= 1:
+             return doc_list
+ 
+         for _ in range(n):
+</pre><h3>Mutant 12960</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -34,7 +34,7 @@
+         for _ in range(n):
+             doc_list.append(self.generate(mask))
+ 
+-        while not repeat:
++        while  repeat:
+             doc_set = set(doc_list)
+             unique_values = len(doc_set)
+ 
+</pre><h3>Mutant 12961</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -35,7 +35,7 @@
+             doc_list.append(self.generate(mask))
+ 
+         while not repeat:
+-            doc_set = set(doc_list)
++            doc_set = None
+             unique_values = len(doc_set)
+ 
+             if unique_values < n:
+</pre><h3>Mutant 12962</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -36,7 +36,7 @@
+ 
+         while not repeat:
+             doc_set = set(doc_list)
+-            unique_values = len(doc_set)
++            unique_values = None
+ 
+             if unique_values < n:
+                 doc_list = list(doc_set) + self.generate_list(
+</pre><h3>Mutant 12963</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -38,7 +38,7 @@
+             doc_set = set(doc_list)
+             unique_values = len(doc_set)
+ 
+-            if unique_values < n:
++            if unique_values <= n:
+                 doc_list = list(doc_set) + self.generate_list(
+                     (n - unique_values),
+                     mask,
+</pre><h3>Mutant 12964</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -39,7 +39,7 @@
+             unique_values = len(doc_set)
+ 
+             if unique_values < n:
+-                doc_list = list(doc_set) + self.generate_list(
++                doc_list = list(doc_set) - self.generate_list(
+                     (n - unique_values),
+                     mask,
+                     repeat
+</pre><h3>Mutant 12965</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -40,7 +40,7 @@
+ 
+             if unique_values < n:
+                 doc_list = list(doc_set) + self.generate_list(
+-                    (n - unique_values),
++                    (n + unique_values),
+                     mask,
+                     repeat
+                 )
+</pre><h3>Mutant 12966</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -39,11 +39,7 @@
+             unique_values = len(doc_set)
+ 
+             if unique_values < n:
+-                doc_list = list(doc_set) + self.generate_list(
+-                    (n - unique_values),
+-                    mask,
+-                    repeat
+-                )
++                doc_list = None
+             else:
+                 repeat = True
+ 
+</pre><h3>Mutant 12967</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -45,7 +45,7 @@
+                     repeat
+                 )
+             else:
+-                repeat = True
++                repeat = False
+ 
+         return doc_list
+ 
+</pre><h3>Mutant 12968</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -45,7 +45,7 @@
+                     repeat
+                 )
+             else:
+-                repeat = True
++                repeat = None
+ 
+         return doc_list
+ 
+</pre><h3>Mutant 12969</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -49,7 +49,6 @@
+ 
+         return doc_list
+ 
+-    @abstractmethod
+     def mask(self, doc: str = '') -> str:
+         """Mascara o documento enviado"""
+         pass
+</pre><h3>Mutant 12970</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -50,7 +50,7 @@
+         return doc_list
+ 
+     @abstractmethod
+-    def mask(self, doc: str = '') -> str:
++    def mask(self, doc: str = 'XXXX') -> str:
+         """Mascara o documento enviado"""
+         pass
+ 
+</pre><h3>Mutant 12971</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -54,7 +54,7 @@
+         """Mascara o documento enviado"""
+         pass
+ 
+-    def _only_digits(self, doc: str = '') -> str:
++    def _only_digits(self, doc: str = 'XXXX') -> str:
+         """Remove os outros caracteres que não sejam dígitos."""
+         return ''.join([x for x in doc if x.isdigit()])
+ 
+</pre><h3>Mutant 12972</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -56,7 +56,7 @@
+ 
+     def _only_digits(self, doc: str = '') -> str:
+         """Remove os outros caracteres que não sejam dígitos."""
+-        return ''.join([x for x in doc if x.isdigit()])
++        return 'XXXX'.join([x for x in doc if x.isdigit()])
+ 
+     def _validate_input(self, input: str, valid_characters: List = None) -> bool:
+         """Validar input.
+</pre><h3>Mutant 12973</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -63,7 +63,7 @@
+         Caso ele possua apenas dígitos e caracteres válidos, retorna True.
+         Caso possua algum caractere que não seja dígito ou caractere válido,
+         retorna False."""
+-        if valid_characters is None:
++        if valid_characters is not None:
+             valid_characters = ['.', '-', '/', ' ']
+ 
+         set_non_digit_characters = set([x for x in input if not x.isdigit()])
+</pre><h3>Mutant 12974</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -64,7 +64,7 @@
+         Caso possua algum caractere que não seja dígito ou caractere válido,
+         retorna False."""
+         if valid_characters is None:
+-            valid_characters = ['.', '-', '/', ' ']
++            valid_characters = ['XX.XX', '-', '/', ' ']
+ 
+         set_non_digit_characters = set([x for x in input if not x.isdigit()])
+         set_valid_characters = set(valid_characters)
+</pre><h3>Mutant 12975</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -64,7 +64,7 @@
+         Caso possua algum caractere que não seja dígito ou caractere válido,
+         retorna False."""
+         if valid_characters is None:
+-            valid_characters = ['.', '-', '/', ' ']
++            valid_characters = ['.', 'XX-XX', '/', ' ']
+ 
+         set_non_digit_characters = set([x for x in input if not x.isdigit()])
+         set_valid_characters = set(valid_characters)
+</pre><h3>Mutant 12976</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -64,7 +64,7 @@
+         Caso possua algum caractere que não seja dígito ou caractere válido,
+         retorna False."""
+         if valid_characters is None:
+-            valid_characters = ['.', '-', '/', ' ']
++            valid_characters = ['.', '-', 'XX/XX', ' ']
+ 
+         set_non_digit_characters = set([x for x in input if not x.isdigit()])
+         set_valid_characters = set(valid_characters)
+</pre><h3>Mutant 12977</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -64,7 +64,7 @@
+         Caso possua algum caractere que não seja dígito ou caractere válido,
+         retorna False."""
+         if valid_characters is None:
+-            valid_characters = ['.', '-', '/', ' ']
++            valid_characters = ['.', '-', '/', 'XX XX']
+ 
+         set_non_digit_characters = set([x for x in input if not x.isdigit()])
+         set_valid_characters = set(valid_characters)
+</pre><h3>Mutant 12978</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -64,7 +64,7 @@
+         Caso possua algum caractere que não seja dígito ou caractere válido,
+         retorna False."""
+         if valid_characters is None:
+-            valid_characters = ['.', '-', '/', ' ']
++            valid_characters = None
+ 
+         set_non_digit_characters = set([x for x in input if not x.isdigit()])
+         set_valid_characters = set(valid_characters)
+</pre><h3>Mutant 12979</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -66,7 +66,7 @@
+         if valid_characters is None:
+             valid_characters = ['.', '-', '/', ' ']
+ 
+-        set_non_digit_characters = set([x for x in input if not x.isdigit()])
++        set_non_digit_characters = set([x for x in input if  x.isdigit()])
+         set_valid_characters = set(valid_characters)
+ 
+         return not (len(set_non_digit_characters.difference(set_valid_characters)) > 0)
+</pre><h3>Mutant 12980</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -66,7 +66,7 @@
+         if valid_characters is None:
+             valid_characters = ['.', '-', '/', ' ']
+ 
+-        set_non_digit_characters = set([x for x in input if not x.isdigit()])
++        set_non_digit_characters = None
+         set_valid_characters = set(valid_characters)
+ 
+         return not (len(set_non_digit_characters.difference(set_valid_characters)) > 0)
+</pre><h3>Mutant 12981</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -67,7 +67,7 @@
+             valid_characters = ['.', '-', '/', ' ']
+ 
+         set_non_digit_characters = set([x for x in input if not x.isdigit()])
+-        set_valid_characters = set(valid_characters)
++        set_valid_characters = None
+ 
+         return not (len(set_non_digit_characters.difference(set_valid_characters)) > 0)
+ 
+</pre><h3>Mutant 12982</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -69,5 +69,5 @@
+         set_non_digit_characters = set([x for x in input if not x.isdigit()])
+         set_valid_characters = set(valid_characters)
+ 
+-        return not (len(set_non_digit_characters.difference(set_valid_characters)) > 0)
++        return  (len(set_non_digit_characters.difference(set_valid_characters)) > 0)
+ 
+</pre><h3>Mutant 12983</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -69,5 +69,5 @@
+         set_non_digit_characters = set([x for x in input if not x.isdigit()])
+         set_valid_characters = set(valid_characters)
+ 
+-        return not (len(set_non_digit_characters.difference(set_valid_characters)) > 0)
++        return not (len(set_non_digit_characters.difference(set_valid_characters)) >= 0)
+ 
+</pre><h3>Mutant 12984</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\BaseDoc.py
+@@ -69,5 +69,5 @@
+         set_non_digit_characters = set([x for x in input if not x.isdigit()])
+         set_valid_characters = set(valid_characters)
+ 
+-        return not (len(set_non_digit_characters.difference(set_valid_characters)) > 0)
++        return not (len(set_non_digit_characters.difference(set_valid_characters)) > 1)
+ 
+</pre></body></html>

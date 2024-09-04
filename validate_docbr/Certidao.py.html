@@ -1,0 +1,846 @@
+<html><body><h1>C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py</h1>Killed 0 out of 77 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 12985</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -7,7 +7,7 @@
+     """Classe referente a Certidão de Nascimento/Casamento/Óbito."""
+ 
+     def __init__(self):
+-        self.digits = list(range(10))
++        self.digits = list(range(11))
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Método para validar a Certidão de Nascimento/Casamento/Óbito."""
+</pre><h3>Mutant 12986</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -7,7 +7,7 @@
+     """Classe referente a Certidão de Nascimento/Casamento/Óbito."""
+ 
+     def __init__(self):
+-        self.digits = list(range(10))
++        self.digits = None
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Método para validar a Certidão de Nascimento/Casamento/Óbito."""
+</pre><h3>Mutant 12987</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -9,7 +9,7 @@
+     def __init__(self):
+         self.digits = list(range(10))
+ 
+-    def validate(self, doc: str = '') -> bool:
++    def validate(self, doc: str = 'XXXX') -> bool:
+         """Método para validar a Certidão de Nascimento/Casamento/Óbito."""
+         if not self._validate_input(doc, ['.', '-']):
+             return False
+</pre><h3>Mutant 12988</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -11,7 +11,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Método para validar a Certidão de Nascimento/Casamento/Óbito."""
+-        if not self._validate_input(doc, ['.', '-']):
++        if  self._validate_input(doc, ['.', '-']):
+             return False
+ 
+         doc = self._only_digits(doc)
+</pre><h3>Mutant 12989</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -11,7 +11,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Método para validar a Certidão de Nascimento/Casamento/Óbito."""
+-        if not self._validate_input(doc, ['.', '-']):
++        if not self._validate_input(doc, ['XX.XX', '-']):
+             return False
+ 
+         doc = self._only_digits(doc)
+</pre><h3>Mutant 12990</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -11,7 +11,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Método para validar a Certidão de Nascimento/Casamento/Óbito."""
+-        if not self._validate_input(doc, ['.', '-']):
++        if not self._validate_input(doc, ['.', 'XX-XX']):
+             return False
+ 
+         doc = self._only_digits(doc)
+</pre><h3>Mutant 12991</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -12,7 +12,7 @@
+     def validate(self, doc: str = '') -> bool:
+         """Método para validar a Certidão de Nascimento/Casamento/Óbito."""
+         if not self._validate_input(doc, ['.', '-']):
+-            return False
++            return True
+ 
+         doc = self._only_digits(doc)
+ 
+</pre><h3>Mutant 12992</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -14,7 +14,7 @@
+         if not self._validate_input(doc, ['.', '-']):
+             return False
+ 
+-        doc = self._only_digits(doc)
++        doc = None
+ 
+         if len(doc) != 32:
+             return False
+</pre><h3>Mutant 12993</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -16,7 +16,7 @@
+ 
+         doc = self._only_digits(doc)
+ 
+-        if len(doc) != 32:
++        if len(doc) == 32:
+             return False
+ 
+         num = list(doc[:-2])
+</pre><h3>Mutant 12994</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -16,7 +16,7 @@
+ 
+         doc = self._only_digits(doc)
+ 
+-        if len(doc) != 32:
++        if len(doc) != 33:
+             return False
+ 
+         num = list(doc[:-2])
+</pre><h3>Mutant 12995</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -17,7 +17,7 @@
+         doc = self._only_digits(doc)
+ 
+         if len(doc) != 32:
+-            return False
++            return True
+ 
+         num = list(doc[:-2])
+         dv = doc[-2:]
+</pre><h3>Mutant 12996</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -19,7 +19,7 @@
+         if len(doc) != 32:
+             return False
+ 
+-        num = list(doc[:-2])
++        num = list(doc[:+2])
+         dv = doc[-2:]
+ 
+         expected_dv = self._generate_verifying_digit(num)
+</pre><h3>Mutant 12997</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -19,7 +19,7 @@
+         if len(doc) != 32:
+             return False
+ 
+-        num = list(doc[:-2])
++        num = list(doc[:-3])
+         dv = doc[-2:]
+ 
+         expected_dv = self._generate_verifying_digit(num)
+</pre><h3>Mutant 12998</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -19,7 +19,7 @@
+         if len(doc) != 32:
+             return False
+ 
+-        num = list(doc[:-2])
++        num = None
+         dv = doc[-2:]
+ 
+         expected_dv = self._generate_verifying_digit(num)
+</pre><h3>Mutant 12999</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -20,7 +20,7 @@
+             return False
+ 
+         num = list(doc[:-2])
+-        dv = doc[-2:]
++        dv = doc[+2:]
+ 
+         expected_dv = self._generate_verifying_digit(num)
+ 
+</pre><h3>Mutant 13000</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -20,7 +20,7 @@
+             return False
+ 
+         num = list(doc[:-2])
+-        dv = doc[-2:]
++        dv = doc[-3:]
+ 
+         expected_dv = self._generate_verifying_digit(num)
+ 
+</pre><h3>Mutant 13001</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -20,7 +20,7 @@
+             return False
+ 
+         num = list(doc[:-2])
+-        dv = doc[-2:]
++        dv = None
+ 
+         expected_dv = self._generate_verifying_digit(num)
+ 
+</pre><h3>Mutant 13002</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -22,7 +22,7 @@
+         num = list(doc[:-2])
+         dv = doc[-2:]
+ 
+-        expected_dv = self._generate_verifying_digit(num)
++        expected_dv = None
+ 
+         if dv == expected_dv:
+             return True
+</pre><h3>Mutant 13003</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -24,7 +24,7 @@
+ 
+         expected_dv = self._generate_verifying_digit(num)
+ 
+-        if dv == expected_dv:
++        if dv != expected_dv:
+             return True
+ 
+         return False
+</pre><h3>Mutant 13004</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -25,7 +25,7 @@
+         expected_dv = self._generate_verifying_digit(num)
+ 
+         if dv == expected_dv:
+-            return True
++            return False
+ 
+         return False
+ 
+</pre><h3>Mutant 13005</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -27,7 +27,7 @@
+         if dv == expected_dv:
+             return True
+ 
+-        return False
++        return True
+ 
+     def _weighted_sum(self, value) -> int:
+         sum = 0
+</pre><h3>Mutant 13006</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -30,7 +30,7 @@
+         return False
+ 
+     def _weighted_sum(self, value) -> int:
+-        sum = 0
++        sum = 1
+         multiplier = 32 - len(value)
+ 
+         for i in range(len(value)):
+</pre><h3>Mutant 13007</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -30,7 +30,7 @@
+         return False
+ 
+     def _weighted_sum(self, value) -> int:
+-        sum = 0
++        sum = None
+         multiplier = 32 - len(value)
+ 
+         for i in range(len(value)):
+</pre><h3>Mutant 13008</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -31,7 +31,7 @@
+ 
+     def _weighted_sum(self, value) -> int:
+         sum = 0
+-        multiplier = 32 - len(value)
++        multiplier = 33 - len(value)
+ 
+         for i in range(len(value)):
+             sum += int(value[i]) * multiplier
+</pre><h3>Mutant 13009</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -31,7 +31,7 @@
+ 
+     def _weighted_sum(self, value) -> int:
+         sum = 0
+-        multiplier = 32 - len(value)
++        multiplier = 32 + len(value)
+ 
+         for i in range(len(value)):
+             sum += int(value[i]) * multiplier
+</pre><h3>Mutant 13010</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -31,7 +31,7 @@
+ 
+     def _weighted_sum(self, value) -> int:
+         sum = 0
+-        multiplier = 32 - len(value)
++        multiplier = None
+ 
+         for i in range(len(value)):
+             sum += int(value[i]) * multiplier
+</pre><h3>Mutant 13011</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -34,7 +34,7 @@
+         multiplier = 32 - len(value)
+ 
+         for i in range(len(value)):
+-            sum += int(value[i]) * multiplier
++            sum = int(value[i]) * multiplier
+ 
+             multiplier += 1
+             multiplier = 0 if multiplier > 10 else multiplier
+</pre><h3>Mutant 13012</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -34,7 +34,7 @@
+         multiplier = 32 - len(value)
+ 
+         for i in range(len(value)):
+-            sum += int(value[i]) * multiplier
++            sum -= int(value[i]) * multiplier
+ 
+             multiplier += 1
+             multiplier = 0 if multiplier > 10 else multiplier
+</pre><h3>Mutant 13013</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -34,7 +34,7 @@
+         multiplier = 32 - len(value)
+ 
+         for i in range(len(value)):
+-            sum += int(value[i]) * multiplier
++            sum += int(value[i]) / multiplier
+ 
+             multiplier += 1
+             multiplier = 0 if multiplier > 10 else multiplier
+</pre><h3>Mutant 13014</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -36,7 +36,7 @@
+         for i in range(len(value)):
+             sum += int(value[i]) * multiplier
+ 
+-            multiplier += 1
++            multiplier = 1
+             multiplier = 0 if multiplier > 10 else multiplier
+ 
+         return sum
+</pre><h3>Mutant 13015</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -36,7 +36,7 @@
+         for i in range(len(value)):
+             sum += int(value[i]) * multiplier
+ 
+-            multiplier += 1
++            multiplier -= 1
+             multiplier = 0 if multiplier > 10 else multiplier
+ 
+         return sum
+</pre><h3>Mutant 13016</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -36,7 +36,7 @@
+         for i in range(len(value)):
+             sum += int(value[i]) * multiplier
+ 
+-            multiplier += 1
++            multiplier += 2
+             multiplier = 0 if multiplier > 10 else multiplier
+ 
+         return sum
+</pre><h3>Mutant 13017</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -37,7 +37,7 @@
+             sum += int(value[i]) * multiplier
+ 
+             multiplier += 1
+-            multiplier = 0 if multiplier > 10 else multiplier
++            multiplier = 1 if multiplier > 10 else multiplier
+ 
+         return sum
+ 
+</pre><h3>Mutant 13018</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -37,7 +37,7 @@
+             sum += int(value[i]) * multiplier
+ 
+             multiplier += 1
+-            multiplier = 0 if multiplier > 10 else multiplier
++            multiplier = 0 if multiplier >= 10 else multiplier
+ 
+         return sum
+ 
+</pre><h3>Mutant 13019</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -37,7 +37,7 @@
+             sum += int(value[i]) * multiplier
+ 
+             multiplier += 1
+-            multiplier = 0 if multiplier > 10 else multiplier
++            multiplier = 0 if multiplier > 11 else multiplier
+ 
+         return sum
+ 
+</pre><h3>Mutant 13020</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -37,7 +37,7 @@
+             sum += int(value[i]) * multiplier
+ 
+             multiplier += 1
+-            multiplier = 0 if multiplier > 10 else multiplier
++            multiplier = None
+ 
+         return sum
+ 
+</pre><h3>Mutant 13021</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -41,7 +41,7 @@
+ 
+         return sum
+ 
+-    def generate(self, mask: bool = False) -> str:
++    def generate(self, mask: bool = True) -> str:
+         """Método para gerar a Certidão de Nascimento/Casamento/Óbito."""
+         # Os trinta primeiros dígitos
+         certidao = [str(sample(self.digits, 1)[0]) for i in range(30)]
+</pre><h3>Mutant 13022</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -44,7 +44,7 @@
+     def generate(self, mask: bool = False) -> str:
+         """Método para gerar a Certidão de Nascimento/Casamento/Óbito."""
+         # Os trinta primeiros dígitos
+-        certidao = [str(sample(self.digits, 1)[0]) for i in range(30)]
++        certidao = [str(sample(self.digits, 2)[0]) for i in range(30)]
+ 
+         # Gerar os dígitos verificadores
+         certidao.append(self._generate_verifying_digit(certidao))
+</pre><h3>Mutant 13023</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -44,7 +44,7 @@
+     def generate(self, mask: bool = False) -> str:
+         """Método para gerar a Certidão de Nascimento/Casamento/Óbito."""
+         # Os trinta primeiros dígitos
+-        certidao = [str(sample(self.digits, 1)[0]) for i in range(30)]
++        certidao = [str(sample(self.digits, 1)[1]) for i in range(30)]
+ 
+         # Gerar os dígitos verificadores
+         certidao.append(self._generate_verifying_digit(certidao))
+</pre><h3>Mutant 13024</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -44,7 +44,7 @@
+     def generate(self, mask: bool = False) -> str:
+         """Método para gerar a Certidão de Nascimento/Casamento/Óbito."""
+         # Os trinta primeiros dígitos
+-        certidao = [str(sample(self.digits, 1)[0]) for i in range(30)]
++        certidao = [str(sample(self.digits, 1)[0]) for i in range(31)]
+ 
+         # Gerar os dígitos verificadores
+         certidao.append(self._generate_verifying_digit(certidao))
+</pre><h3>Mutant 13025</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -44,7 +44,7 @@
+     def generate(self, mask: bool = False) -> str:
+         """Método para gerar a Certidão de Nascimento/Casamento/Óbito."""
+         # Os trinta primeiros dígitos
+-        certidao = [str(sample(self.digits, 1)[0]) for i in range(30)]
++        certidao = None
+ 
+         # Gerar os dígitos verificadores
+         certidao.append(self._generate_verifying_digit(certidao))
+</pre><h3>Mutant 13026</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -49,7 +49,7 @@
+         # Gerar os dígitos verificadores
+         certidao.append(self._generate_verifying_digit(certidao))
+ 
+-        certidao = "".join(certidao)
++        certidao = "XXXX".join(certidao)
+ 
+         return self.mask(certidao) if mask else certidao
+ 
+</pre><h3>Mutant 13027</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -49,7 +49,7 @@
+         # Gerar os dígitos verificadores
+         certidao.append(self._generate_verifying_digit(certidao))
+ 
+-        certidao = "".join(certidao)
++        certidao = None
+ 
+         return self.mask(certidao) if mask else certidao
+ 
+</pre><h3>Mutant 13028</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -53,7 +53,7 @@
+ 
+         return self.mask(certidao) if mask else certidao
+ 
+-    def mask(self, doc: str = '') -> str:
++    def mask(self, doc: str = 'XXXX') -> str:
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+             doc[:6], doc[6:8], doc[8:10], doc[10:14],
+</pre><h3>Mutant 13029</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -55,7 +55,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+-        return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
++        return "XX{}.{}.{}.{}.{}.{}.{}.{}-{}XX".format(
+             doc[:6], doc[6:8], doc[8:10], doc[10:14],
+             doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
+ 
+</pre><h3>Mutant 13030</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -56,7 +56,7 @@
+     def mask(self, doc: str = '') -> str:
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+-            doc[:6], doc[6:8], doc[8:10], doc[10:14],
++            doc[:7], doc[6:8], doc[8:10], doc[10:14],
+             doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+</pre><h3>Mutant 13031</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -56,7 +56,7 @@
+     def mask(self, doc: str = '') -> str:
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+-            doc[:6], doc[6:8], doc[8:10], doc[10:14],
++            doc[:6], doc[7:8], doc[8:10], doc[10:14],
+             doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+</pre><h3>Mutant 13032</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -56,7 +56,7 @@
+     def mask(self, doc: str = '') -> str:
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+-            doc[:6], doc[6:8], doc[8:10], doc[10:14],
++            doc[:6], doc[6:9], doc[8:10], doc[10:14],
+             doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+</pre><h3>Mutant 13033</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -56,7 +56,7 @@
+     def mask(self, doc: str = '') -> str:
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+-            doc[:6], doc[6:8], doc[8:10], doc[10:14],
++            doc[:6], doc[6:8], doc[9:10], doc[10:14],
+             doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+</pre><h3>Mutant 13034</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -56,7 +56,7 @@
+     def mask(self, doc: str = '') -> str:
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+-            doc[:6], doc[6:8], doc[8:10], doc[10:14],
++            doc[:6], doc[6:8], doc[8:11], doc[10:14],
+             doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+</pre><h3>Mutant 13035</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -56,7 +56,7 @@
+     def mask(self, doc: str = '') -> str:
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+-            doc[:6], doc[6:8], doc[8:10], doc[10:14],
++            doc[:6], doc[6:8], doc[8:10], doc[11:14],
+             doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+</pre><h3>Mutant 13036</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -56,7 +56,7 @@
+     def mask(self, doc: str = '') -> str:
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+-            doc[:6], doc[6:8], doc[8:10], doc[10:14],
++            doc[:6], doc[6:8], doc[8:10], doc[10:15],
+             doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+</pre><h3>Mutant 13037</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -57,7 +57,7 @@
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+             doc[:6], doc[6:8], doc[8:10], doc[10:14],
+-            doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
++            doc[15], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+</pre><h3>Mutant 13038</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -57,7 +57,7 @@
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+             doc[:6], doc[6:8], doc[8:10], doc[10:14],
+-            doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
++            doc[14], doc[16:20], doc[20:23], doc[23:30], doc[-2:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+</pre><h3>Mutant 13039</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -57,7 +57,7 @@
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+             doc[:6], doc[6:8], doc[8:10], doc[10:14],
+-            doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
++            doc[14], doc[15:21], doc[20:23], doc[23:30], doc[-2:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+</pre><h3>Mutant 13040</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -57,7 +57,7 @@
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+             doc[:6], doc[6:8], doc[8:10], doc[10:14],
+-            doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
++            doc[14], doc[15:20], doc[21:23], doc[23:30], doc[-2:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+</pre><h3>Mutant 13041</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -57,7 +57,7 @@
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+             doc[:6], doc[6:8], doc[8:10], doc[10:14],
+-            doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
++            doc[14], doc[15:20], doc[20:24], doc[23:30], doc[-2:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+</pre><h3>Mutant 13042</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -57,7 +57,7 @@
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+             doc[:6], doc[6:8], doc[8:10], doc[10:14],
+-            doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
++            doc[14], doc[15:20], doc[20:23], doc[24:30], doc[-2:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+</pre><h3>Mutant 13043</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -57,7 +57,7 @@
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+             doc[:6], doc[6:8], doc[8:10], doc[10:14],
+-            doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
++            doc[14], doc[15:20], doc[20:23], doc[23:31], doc[-2:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+</pre><h3>Mutant 13044</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -57,7 +57,7 @@
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+             doc[:6], doc[6:8], doc[8:10], doc[10:14],
+-            doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
++            doc[14], doc[15:20], doc[20:23], doc[23:30], doc[+2:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+</pre><h3>Mutant 13045</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -57,7 +57,7 @@
+         """Mascara para a Certidão de Nascimento/Casamento/Óbito."""
+         return "{}.{}.{}.{}.{}.{}.{}.{}-{}".format(
+             doc[:6], doc[6:8], doc[8:10], doc[10:14],
+-            doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-2:])
++            doc[14], doc[15:20], doc[20:23], doc[23:30], doc[-3:])
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+</pre><h3>Mutant 13046</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -61,7 +61,7 @@
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+-        dv1 = self._weighted_sum(doc) % 11
++        dv1 = self._weighted_sum(doc) / 11
+         dv1 = 1 if dv1 > 9 else dv1
+ 
+         dv2 = self._weighted_sum(doc+[dv1]) % 11
+</pre><h3>Mutant 13047</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -61,7 +61,7 @@
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+-        dv1 = self._weighted_sum(doc) % 11
++        dv1 = self._weighted_sum(doc) % 12
+         dv1 = 1 if dv1 > 9 else dv1
+ 
+         dv2 = self._weighted_sum(doc+[dv1]) % 11
+</pre><h3>Mutant 13048</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -61,7 +61,7 @@
+ 
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+-        dv1 = self._weighted_sum(doc) % 11
++        dv1 = None
+         dv1 = 1 if dv1 > 9 else dv1
+ 
+         dv2 = self._weighted_sum(doc+[dv1]) % 11
+</pre><h3>Mutant 13049</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -62,7 +62,7 @@
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+         dv1 = self._weighted_sum(doc) % 11
+-        dv1 = 1 if dv1 > 9 else dv1
++        dv1 = 2 if dv1 > 9 else dv1
+ 
+         dv2 = self._weighted_sum(doc+[dv1]) % 11
+         dv2 = 1 if dv2 > 9 else dv2
+</pre><h3>Mutant 13050</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -62,7 +62,7 @@
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+         dv1 = self._weighted_sum(doc) % 11
+-        dv1 = 1 if dv1 > 9 else dv1
++        dv1 = 1 if dv1 >= 9 else dv1
+ 
+         dv2 = self._weighted_sum(doc+[dv1]) % 11
+         dv2 = 1 if dv2 > 9 else dv2
+</pre><h3>Mutant 13051</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -62,7 +62,7 @@
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+         dv1 = self._weighted_sum(doc) % 11
+-        dv1 = 1 if dv1 > 9 else dv1
++        dv1 = 1 if dv1 > 10 else dv1
+ 
+         dv2 = self._weighted_sum(doc+[dv1]) % 11
+         dv2 = 1 if dv2 > 9 else dv2
+</pre><h3>Mutant 13052</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -62,7 +62,7 @@
+     def _generate_verifying_digit(self, doc: list) -> str:
+         """Gerar o dígito verificador da Certidao."""
+         dv1 = self._weighted_sum(doc) % 11
+-        dv1 = 1 if dv1 > 9 else dv1
++        dv1 = None
+ 
+         dv2 = self._weighted_sum(doc+[dv1]) % 11
+         dv2 = 1 if dv2 > 9 else dv2
+</pre><h3>Mutant 13053</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -64,7 +64,7 @@
+         dv1 = self._weighted_sum(doc) % 11
+         dv1 = 1 if dv1 > 9 else dv1
+ 
+-        dv2 = self._weighted_sum(doc+[dv1]) % 11
++        dv2 = self._weighted_sum(doc-[dv1]) % 11
+         dv2 = 1 if dv2 > 9 else dv2
+ 
+         return str(dv1)+str(dv2)
+</pre><h3>Mutant 13054</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -64,7 +64,7 @@
+         dv1 = self._weighted_sum(doc) % 11
+         dv1 = 1 if dv1 > 9 else dv1
+ 
+-        dv2 = self._weighted_sum(doc+[dv1]) % 11
++        dv2 = self._weighted_sum(doc+[dv1]) / 11
+         dv2 = 1 if dv2 > 9 else dv2
+ 
+         return str(dv1)+str(dv2)
+</pre><h3>Mutant 13055</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -64,7 +64,7 @@
+         dv1 = self._weighted_sum(doc) % 11
+         dv1 = 1 if dv1 > 9 else dv1
+ 
+-        dv2 = self._weighted_sum(doc+[dv1]) % 11
++        dv2 = self._weighted_sum(doc+[dv1]) % 12
+         dv2 = 1 if dv2 > 9 else dv2
+ 
+         return str(dv1)+str(dv2)
+</pre><h3>Mutant 13056</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -64,7 +64,7 @@
+         dv1 = self._weighted_sum(doc) % 11
+         dv1 = 1 if dv1 > 9 else dv1
+ 
+-        dv2 = self._weighted_sum(doc+[dv1]) % 11
++        dv2 = None
+         dv2 = 1 if dv2 > 9 else dv2
+ 
+         return str(dv1)+str(dv2)
+</pre><h3>Mutant 13057</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -65,7 +65,7 @@
+         dv1 = 1 if dv1 > 9 else dv1
+ 
+         dv2 = self._weighted_sum(doc+[dv1]) % 11
+-        dv2 = 1 if dv2 > 9 else dv2
++        dv2 = 2 if dv2 > 9 else dv2
+ 
+         return str(dv1)+str(dv2)
+ 
+</pre><h3>Mutant 13058</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -65,7 +65,7 @@
+         dv1 = 1 if dv1 > 9 else dv1
+ 
+         dv2 = self._weighted_sum(doc+[dv1]) % 11
+-        dv2 = 1 if dv2 > 9 else dv2
++        dv2 = 1 if dv2 >= 9 else dv2
+ 
+         return str(dv1)+str(dv2)
+ 
+</pre><h3>Mutant 13059</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -65,7 +65,7 @@
+         dv1 = 1 if dv1 > 9 else dv1
+ 
+         dv2 = self._weighted_sum(doc+[dv1]) % 11
+-        dv2 = 1 if dv2 > 9 else dv2
++        dv2 = 1 if dv2 > 10 else dv2
+ 
+         return str(dv1)+str(dv2)
+ 
+</pre><h3>Mutant 13060</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -65,7 +65,7 @@
+         dv1 = 1 if dv1 > 9 else dv1
+ 
+         dv2 = self._weighted_sum(doc+[dv1]) % 11
+-        dv2 = 1 if dv2 > 9 else dv2
++        dv2 = None
+ 
+         return str(dv1)+str(dv2)
+ 
+</pre><h3>Mutant 13061</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\Certidao.py
+@@ -67,5 +67,5 @@
+         dv2 = self._weighted_sum(doc+[dv1]) % 11
+         dv2 = 1 if dv2 > 9 else dv2
+ 
+-        return str(dv1)+str(dv2)
++        return str(dv1)-str(dv2)
+ 
+</pre></body></html>

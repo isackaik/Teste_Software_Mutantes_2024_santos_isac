@@ -1,0 +1,937 @@
+<html><body><h1>C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py</h1>Killed 0 out of 85 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 13141</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -8,7 +8,7 @@
+     """Classe referente ao Cadastro Nacional da Pessoa Jurídica (CNPJ)."""
+ 
+     def __init__(self):
+-        self.digits = list(range(10))
++        self.digits = list(range(11))
+         self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
+         self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
+ 
+</pre><h3>Mutant 13142</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -8,7 +8,7 @@
+     """Classe referente ao Cadastro Nacional da Pessoa Jurídica (CNPJ)."""
+ 
+     def __init__(self):
+-        self.digits = list(range(10))
++        self.digits = None
+         self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
+         self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
+ 
+</pre><h3>Mutant 13143</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -9,7 +9,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
++        self.weights_first = list(range(6, 1, -1)) + list(range(9, 1, -1))
+         self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+</pre><h3>Mutant 13144</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -9,7 +9,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
++        self.weights_first = list(range(5, 2, -1)) + list(range(9, 1, -1))
+         self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+</pre><h3>Mutant 13145</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -9,7 +9,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
++        self.weights_first = list(range(5, 1, +1)) + list(range(9, 1, -1))
+         self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+</pre><h3>Mutant 13146</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -9,7 +9,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
++        self.weights_first = list(range(5, 1, -2)) + list(range(9, 1, -1))
+         self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+</pre><h3>Mutant 13147</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -9,7 +9,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
++        self.weights_first = list(range(5, 1, -1)) - list(range(9, 1, -1))
+         self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+</pre><h3>Mutant 13148</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -9,7 +9,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
++        self.weights_first = list(range(5, 1, -1)) + list(range(10, 1, -1))
+         self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+</pre><h3>Mutant 13149</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -9,7 +9,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
++        self.weights_first = list(range(5, 1, -1)) + list(range(9, 2, -1))
+         self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+</pre><h3>Mutant 13150</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -9,7 +9,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
++        self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, +1))
+         self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+</pre><h3>Mutant 13151</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -9,7 +9,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
++        self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -2))
+         self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+</pre><h3>Mutant 13152</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -9,7 +9,7 @@
+ 
+     def __init__(self):
+         self.digits = list(range(10))
+-        self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
++        self.weights_first = None
+         self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+</pre><h3>Mutant 13153</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -10,7 +10,7 @@
+     def __init__(self):
+         self.digits = list(range(10))
+         self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
+-        self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
++        self.weights_second = list(range(7, 1, -1)) + list(range(9, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNPJ."""
+</pre><h3>Mutant 13154</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -10,7 +10,7 @@
+     def __init__(self):
+         self.digits = list(range(10))
+         self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
+-        self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
++        self.weights_second = list(range(6, 2, -1)) + list(range(9, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNPJ."""
+</pre><h3>Mutant 13155</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -10,7 +10,7 @@
+     def __init__(self):
+         self.digits = list(range(10))
+         self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
+-        self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
++        self.weights_second = list(range(6, 1, +1)) + list(range(9, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNPJ."""
+</pre><h3>Mutant 13156</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -10,7 +10,7 @@
+     def __init__(self):
+         self.digits = list(range(10))
+         self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
+-        self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
++        self.weights_second = list(range(6, 1, -2)) + list(range(9, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNPJ."""
+</pre><h3>Mutant 13157</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -10,7 +10,7 @@
+     def __init__(self):
+         self.digits = list(range(10))
+         self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
+-        self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
++        self.weights_second = list(range(6, 1, -1)) - list(range(9, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNPJ."""
+</pre><h3>Mutant 13158</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -10,7 +10,7 @@
+     def __init__(self):
+         self.digits = list(range(10))
+         self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
+-        self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
++        self.weights_second = list(range(6, 1, -1)) + list(range(10, 1, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNPJ."""
+</pre><h3>Mutant 13159</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -10,7 +10,7 @@
+     def __init__(self):
+         self.digits = list(range(10))
+         self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
+-        self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
++        self.weights_second = list(range(6, 1, -1)) + list(range(9, 2, -1))
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNPJ."""
+</pre><h3>Mutant 13160</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -10,7 +10,7 @@
+     def __init__(self):
+         self.digits = list(range(10))
+         self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
+-        self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
++        self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, +1))
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNPJ."""
+</pre><h3>Mutant 13161</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -10,7 +10,7 @@
+     def __init__(self):
+         self.digits = list(range(10))
+         self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
+-        self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
++        self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -2))
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNPJ."""
+</pre><h3>Mutant 13162</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -10,7 +10,7 @@
+     def __init__(self):
+         self.digits = list(range(10))
+         self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
+-        self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
++        self.weights_second = None
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNPJ."""
+</pre><h3>Mutant 13163</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -12,7 +12,7 @@
+         self.weights_first = list(range(5, 1, -1)) + list(range(9, 1, -1))
+         self.weights_second = list(range(6, 1, -1)) + list(range(9, 1, -1))
+ 
+-    def validate(self, doc: str = '') -> bool:
++    def validate(self, doc: str = 'XXXX') -> bool:
+         """Validar CNPJ."""
+         if not self._validate_input(doc, ['.', '/', '-']):
+             return False
+</pre><h3>Mutant 13164</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -14,7 +14,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNPJ."""
+-        if not self._validate_input(doc, ['.', '/', '-']):
++        if  self._validate_input(doc, ['.', '/', '-']):
+             return False
+ 
+         doc = self._only_digits(doc)
+</pre><h3>Mutant 13165</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -14,7 +14,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNPJ."""
+-        if not self._validate_input(doc, ['.', '/', '-']):
++        if not self._validate_input(doc, ['XX.XX', '/', '-']):
+             return False
+ 
+         doc = self._only_digits(doc)
+</pre><h3>Mutant 13166</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -14,7 +14,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNPJ."""
+-        if not self._validate_input(doc, ['.', '/', '-']):
++        if not self._validate_input(doc, ['.', 'XX/XX', '-']):
+             return False
+ 
+         doc = self._only_digits(doc)
+</pre><h3>Mutant 13167</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -14,7 +14,7 @@
+ 
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNPJ."""
+-        if not self._validate_input(doc, ['.', '/', '-']):
++        if not self._validate_input(doc, ['.', '/', 'XX-XX']):
+             return False
+ 
+         doc = self._only_digits(doc)
+</pre><h3>Mutant 13168</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -15,7 +15,7 @@
+     def validate(self, doc: str = '') -> bool:
+         """Validar CNPJ."""
+         if not self._validate_input(doc, ['.', '/', '-']):
+-            return False
++            return True
+ 
+         doc = self._only_digits(doc)
+ 
+</pre><h3>Mutant 13169</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -17,7 +17,7 @@
+         if not self._validate_input(doc, ['.', '/', '-']):
+             return False
+ 
+-        doc = self._only_digits(doc)
++        doc = None
+ 
+         if len(doc) != 14:
+             return False
+</pre><h3>Mutant 13170</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -19,7 +19,7 @@
+ 
+         doc = self._only_digits(doc)
+ 
+-        if len(doc) != 14:
++        if len(doc) == 14:
+             return False
+ 
+         return self._generate_first_digit(doc) == doc[12] \
+</pre><h3>Mutant 13171</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -19,7 +19,7 @@
+ 
+         doc = self._only_digits(doc)
+ 
+-        if len(doc) != 14:
++        if len(doc) != 15:
+             return False
+ 
+         return self._generate_first_digit(doc) == doc[12] \
+</pre><h3>Mutant 13172</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -20,7 +20,7 @@
+         doc = self._only_digits(doc)
+ 
+         if len(doc) != 14:
+-            return False
++            return True
+ 
+         return self._generate_first_digit(doc) == doc[12] \
+                and self._generate_second_digit(doc) == doc[13]
+</pre><h3>Mutant 13173</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -22,7 +22,7 @@
+         if len(doc) != 14:
+             return False
+ 
+-        return self._generate_first_digit(doc) == doc[12] \
++        return self._generate_first_digit(doc) != doc[12] \
+                and self._generate_second_digit(doc) == doc[13]
+ 
+     def generate(self, mask: bool = False) -> str:
+</pre><h3>Mutant 13174</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -22,7 +22,7 @@
+         if len(doc) != 14:
+             return False
+ 
+-        return self._generate_first_digit(doc) == doc[12] \
++        return self._generate_first_digit(doc) == doc[13] \
+                and self._generate_second_digit(doc) == doc[13]
+ 
+     def generate(self, mask: bool = False) -> str:
+</pre><h3>Mutant 13175</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -23,7 +23,7 @@
+             return False
+ 
+         return self._generate_first_digit(doc) == doc[12] \
+-               and self._generate_second_digit(doc) == doc[13]
++               and self._generate_second_digit(doc) != doc[13]
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CNPJ."""
+</pre><h3>Mutant 13176</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -23,7 +23,7 @@
+             return False
+ 
+         return self._generate_first_digit(doc) == doc[12] \
+-               and self._generate_second_digit(doc) == doc[13]
++               and self._generate_second_digit(doc) == doc[14]
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CNPJ."""
+</pre><h3>Mutant 13177</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -22,8 +22,7 @@
+         if len(doc) != 14:
+             return False
+ 
+-        return self._generate_first_digit(doc) == doc[12] \
+-               and self._generate_second_digit(doc) == doc[13]
++        return self._generate_first_digit(doc) == doc[12] or self._generate_second_digit(doc) == doc[13]
+ 
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CNPJ."""
+</pre><h3>Mutant 13178</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -25,7 +25,7 @@
+         return self._generate_first_digit(doc) == doc[12] \
+                and self._generate_second_digit(doc) == doc[13]
+ 
+-    def generate(self, mask: bool = False) -> str:
++    def generate(self, mask: bool = True) -> str:
+         """Gerar CNPJ."""
+         # Os doze primeiros dígitos
+         cnpj = [str(sample(self.digits, 1)[0]) for i in range(12)]
+</pre><h3>Mutant 13179</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -28,7 +28,7 @@
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CNPJ."""
+         # Os doze primeiros dígitos
+-        cnpj = [str(sample(self.digits, 1)[0]) for i in range(12)]
++        cnpj = [str(sample(self.digits, 2)[0]) for i in range(12)]
+ 
+         # Gerar os dígitos verificadores
+         cnpj.append(self._generate_first_digit(cnpj))
+</pre><h3>Mutant 13180</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -28,7 +28,7 @@
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CNPJ."""
+         # Os doze primeiros dígitos
+-        cnpj = [str(sample(self.digits, 1)[0]) for i in range(12)]
++        cnpj = [str(sample(self.digits, 1)[1]) for i in range(12)]
+ 
+         # Gerar os dígitos verificadores
+         cnpj.append(self._generate_first_digit(cnpj))
+</pre><h3>Mutant 13181</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -28,7 +28,7 @@
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CNPJ."""
+         # Os doze primeiros dígitos
+-        cnpj = [str(sample(self.digits, 1)[0]) for i in range(12)]
++        cnpj = [str(sample(self.digits, 1)[0]) for i in range(13)]
+ 
+         # Gerar os dígitos verificadores
+         cnpj.append(self._generate_first_digit(cnpj))
+</pre><h3>Mutant 13182</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -28,7 +28,7 @@
+     def generate(self, mask: bool = False) -> str:
+         """Gerar CNPJ."""
+         # Os doze primeiros dígitos
+-        cnpj = [str(sample(self.digits, 1)[0]) for i in range(12)]
++        cnpj = None
+ 
+         # Gerar os dígitos verificadores
+         cnpj.append(self._generate_first_digit(cnpj))
+</pre><h3>Mutant 13183</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -34,7 +34,7 @@
+         cnpj.append(self._generate_first_digit(cnpj))
+         cnpj.append(self._generate_second_digit(cnpj))
+ 
+-        cnpj = "".join(cnpj)
++        cnpj = "XXXX".join(cnpj)
+ 
+         return self.mask(cnpj) if mask else cnpj
+ 
+</pre><h3>Mutant 13184</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -34,7 +34,7 @@
+         cnpj.append(self._generate_first_digit(cnpj))
+         cnpj.append(self._generate_second_digit(cnpj))
+ 
+-        cnpj = "".join(cnpj)
++        cnpj = None
+ 
+         return self.mask(cnpj) if mask else cnpj
+ 
+</pre><h3>Mutant 13185</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -38,7 +38,7 @@
+ 
+         return self.mask(cnpj) if mask else cnpj
+ 
+-    def mask(self, doc: str = '') -> str:
++    def mask(self, doc: str = 'XXXX') -> str:
+         """Coloca a máscara de CNPJ na variável doc."""
+         return f"{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[8:12]}-{doc[-2:]}"
+ 
+</pre><h3>Mutant 13186</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -40,7 +40,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CNPJ na variável doc."""
+-        return f"{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[8:12]}-{doc[-2:]}"
++        return f"{doc[:3]}.{doc[2:5]}.{doc[5:8]}/{doc[8:12]}-{doc[-2:]}"
+ 
+     def _generate_first_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o primeiro dígito verificador do CNPJ."""
+</pre><h3>Mutant 13187</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -40,7 +40,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CNPJ na variável doc."""
+-        return f"{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[8:12]}-{doc[-2:]}"
++        return f"{doc[:2]}.{doc[3:5]}.{doc[5:8]}/{doc[8:12]}-{doc[-2:]}"
+ 
+     def _generate_first_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o primeiro dígito verificador do CNPJ."""
+</pre><h3>Mutant 13188</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -40,7 +40,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CNPJ na variável doc."""
+-        return f"{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[8:12]}-{doc[-2:]}"
++        return f"{doc[:2]}.{doc[2:6]}.{doc[5:8]}/{doc[8:12]}-{doc[-2:]}"
+ 
+     def _generate_first_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o primeiro dígito verificador do CNPJ."""
+</pre><h3>Mutant 13189</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -40,7 +40,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CNPJ na variável doc."""
+-        return f"{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[8:12]}-{doc[-2:]}"
++        return f"{doc[:2]}.{doc[2:5]}.{doc[6:8]}/{doc[8:12]}-{doc[-2:]}"
+ 
+     def _generate_first_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o primeiro dígito verificador do CNPJ."""
+</pre><h3>Mutant 13190</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -40,7 +40,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CNPJ na variável doc."""
+-        return f"{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[8:12]}-{doc[-2:]}"
++        return f"{doc[:2]}.{doc[2:5]}.{doc[5:9]}/{doc[8:12]}-{doc[-2:]}"
+ 
+     def _generate_first_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o primeiro dígito verificador do CNPJ."""
+</pre><h3>Mutant 13191</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -40,7 +40,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CNPJ na variável doc."""
+-        return f"{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[8:12]}-{doc[-2:]}"
++        return f"{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[9:12]}-{doc[-2:]}"
+ 
+     def _generate_first_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o primeiro dígito verificador do CNPJ."""
+</pre><h3>Mutant 13192</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -40,7 +40,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CNPJ na variável doc."""
+-        return f"{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[8:12]}-{doc[-2:]}"
++        return f"{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[8:13]}-{doc[-2:]}"
+ 
+     def _generate_first_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o primeiro dígito verificador do CNPJ."""
+</pre><h3>Mutant 13193</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -40,7 +40,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CNPJ na variável doc."""
+-        return f"{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[8:12]}-{doc[-2:]}"
++        return f"{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[8:12]}-{doc[+2:]}"
+ 
+     def _generate_first_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o primeiro dígito verificador do CNPJ."""
+</pre><h3>Mutant 13194</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -40,7 +40,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CNPJ na variável doc."""
+-        return f"{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[8:12]}-{doc[-2:]}"
++        return f"{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[8:12]}-{doc[-3:]}"
+ 
+     def _generate_first_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o primeiro dígito verificador do CNPJ."""
+</pre><h3>Mutant 13195</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -40,7 +40,7 @@
+ 
+     def mask(self, doc: str = '') -> str:
+         """Coloca a máscara de CNPJ na variável doc."""
+-        return f"{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[8:12]}-{doc[-2:]}"
++        return f"XX{doc[:2]}.{doc[2:5]}.{doc[5:8]}/{doc[8:12]}-{doc[-2:]}XX"
+ 
+     def _generate_first_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o primeiro dígito verificador do CNPJ."""
+</pre><h3>Mutant 13196</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -44,7 +44,7 @@
+ 
+     def _generate_first_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o primeiro dígito verificador do CNPJ."""
+-        sum = 0
++        sum = 1
+ 
+         for i in range(12):
+             sum += int(doc[i]) * self.weights_first[i]
+</pre><h3>Mutant 13197</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -44,7 +44,7 @@
+ 
+     def _generate_first_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o primeiro dígito verificador do CNPJ."""
+-        sum = 0
++        sum = None
+ 
+         for i in range(12):
+             sum += int(doc[i]) * self.weights_first[i]
+</pre><h3>Mutant 13198</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -46,7 +46,7 @@
+         """Gerar o primeiro dígito verificador do CNPJ."""
+         sum = 0
+ 
+-        for i in range(12):
++        for i in range(13):
+             sum += int(doc[i]) * self.weights_first[i]
+ 
+         sum = sum % 11
+</pre><h3>Mutant 13199</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -47,7 +47,7 @@
+         sum = 0
+ 
+         for i in range(12):
+-            sum += int(doc[i]) * self.weights_first[i]
++            sum = int(doc[i]) * self.weights_first[i]
+ 
+         sum = sum % 11
+         sum = 0 if sum < 2 else 11 - sum
+</pre><h3>Mutant 13200</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -47,7 +47,7 @@
+         sum = 0
+ 
+         for i in range(12):
+-            sum += int(doc[i]) * self.weights_first[i]
++            sum -= int(doc[i]) * self.weights_first[i]
+ 
+         sum = sum % 11
+         sum = 0 if sum < 2 else 11 - sum
+</pre><h3>Mutant 13201</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -47,7 +47,7 @@
+         sum = 0
+ 
+         for i in range(12):
+-            sum += int(doc[i]) * self.weights_first[i]
++            sum += int(doc[i]) / self.weights_first[i]
+ 
+         sum = sum % 11
+         sum = 0 if sum < 2 else 11 - sum
+</pre><h3>Mutant 13202</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -49,7 +49,7 @@
+         for i in range(12):
+             sum += int(doc[i]) * self.weights_first[i]
+ 
+-        sum = sum % 11
++        sum = sum / 11
+         sum = 0 if sum < 2 else 11 - sum
+ 
+         return str(sum)
+</pre><h3>Mutant 13203</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -49,7 +49,7 @@
+         for i in range(12):
+             sum += int(doc[i]) * self.weights_first[i]
+ 
+-        sum = sum % 11
++        sum = sum % 12
+         sum = 0 if sum < 2 else 11 - sum
+ 
+         return str(sum)
+</pre><h3>Mutant 13204</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -49,7 +49,7 @@
+         for i in range(12):
+             sum += int(doc[i]) * self.weights_first[i]
+ 
+-        sum = sum % 11
++        sum = None
+         sum = 0 if sum < 2 else 11 - sum
+ 
+         return str(sum)
+</pre><h3>Mutant 13205</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -50,7 +50,7 @@
+             sum += int(doc[i]) * self.weights_first[i]
+ 
+         sum = sum % 11
+-        sum = 0 if sum < 2 else 11 - sum
++        sum = 1 if sum < 2 else 11 - sum
+ 
+         return str(sum)
+ 
+</pre><h3>Mutant 13206</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -50,7 +50,7 @@
+             sum += int(doc[i]) * self.weights_first[i]
+ 
+         sum = sum % 11
+-        sum = 0 if sum < 2 else 11 - sum
++        sum = 0 if sum <= 2 else 11 - sum
+ 
+         return str(sum)
+ 
+</pre><h3>Mutant 13207</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -50,7 +50,7 @@
+             sum += int(doc[i]) * self.weights_first[i]
+ 
+         sum = sum % 11
+-        sum = 0 if sum < 2 else 11 - sum
++        sum = 0 if sum < 3 else 11 - sum
+ 
+         return str(sum)
+ 
+</pre><h3>Mutant 13208</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -50,7 +50,7 @@
+             sum += int(doc[i]) * self.weights_first[i]
+ 
+         sum = sum % 11
+-        sum = 0 if sum < 2 else 11 - sum
++        sum = 0 if sum < 2 else 12 - sum
+ 
+         return str(sum)
+ 
+</pre><h3>Mutant 13209</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -50,7 +50,7 @@
+             sum += int(doc[i]) * self.weights_first[i]
+ 
+         sum = sum % 11
+-        sum = 0 if sum < 2 else 11 - sum
++        sum = 0 if sum < 2 else 11 + sum
+ 
+         return str(sum)
+ 
+</pre><h3>Mutant 13210</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -50,7 +50,7 @@
+             sum += int(doc[i]) * self.weights_first[i]
+ 
+         sum = sum % 11
+-        sum = 0 if sum < 2 else 11 - sum
++        sum = None
+ 
+         return str(sum)
+ 
+</pre><h3>Mutant 13211</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -56,7 +56,7 @@
+ 
+     def _generate_second_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o segundo dígito verificador do CNPJ."""
+-        sum = 0
++        sum = 1
+ 
+         for i in range(13):
+             sum += int(doc[i]) * self.weights_second[i]
+</pre><h3>Mutant 13212</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -56,7 +56,7 @@
+ 
+     def _generate_second_digit(self, doc: Union[str, list]) -> str:
+         """Gerar o segundo dígito verificador do CNPJ."""
+-        sum = 0
++        sum = None
+ 
+         for i in range(13):
+             sum += int(doc[i]) * self.weights_second[i]
+</pre><h3>Mutant 13213</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -58,7 +58,7 @@
+         """Gerar o segundo dígito verificador do CNPJ."""
+         sum = 0
+ 
+-        for i in range(13):
++        for i in range(14):
+             sum += int(doc[i]) * self.weights_second[i]
+ 
+         sum = sum % 11
+</pre><h3>Mutant 13214</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -59,7 +59,7 @@
+         sum = 0
+ 
+         for i in range(13):
+-            sum += int(doc[i]) * self.weights_second[i]
++            sum = int(doc[i]) * self.weights_second[i]
+ 
+         sum = sum % 11
+         sum = 0 if sum < 2 else 11 - sum
+</pre><h3>Mutant 13215</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -59,7 +59,7 @@
+         sum = 0
+ 
+         for i in range(13):
+-            sum += int(doc[i]) * self.weights_second[i]
++            sum -= int(doc[i]) * self.weights_second[i]
+ 
+         sum = sum % 11
+         sum = 0 if sum < 2 else 11 - sum
+</pre><h3>Mutant 13216</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -59,7 +59,7 @@
+         sum = 0
+ 
+         for i in range(13):
+-            sum += int(doc[i]) * self.weights_second[i]
++            sum += int(doc[i]) / self.weights_second[i]
+ 
+         sum = sum % 11
+         sum = 0 if sum < 2 else 11 - sum
+</pre><h3>Mutant 13217</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -61,7 +61,7 @@
+         for i in range(13):
+             sum += int(doc[i]) * self.weights_second[i]
+ 
+-        sum = sum % 11
++        sum = sum / 11
+         sum = 0 if sum < 2 else 11 - sum
+ 
+         return str(sum)
+</pre><h3>Mutant 13218</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -61,7 +61,7 @@
+         for i in range(13):
+             sum += int(doc[i]) * self.weights_second[i]
+ 
+-        sum = sum % 11
++        sum = sum % 12
+         sum = 0 if sum < 2 else 11 - sum
+ 
+         return str(sum)
+</pre><h3>Mutant 13219</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -61,7 +61,7 @@
+         for i in range(13):
+             sum += int(doc[i]) * self.weights_second[i]
+ 
+-        sum = sum % 11
++        sum = None
+         sum = 0 if sum < 2 else 11 - sum
+ 
+         return str(sum)
+</pre><h3>Mutant 13220</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -62,7 +62,7 @@
+             sum += int(doc[i]) * self.weights_second[i]
+ 
+         sum = sum % 11
+-        sum = 0 if sum < 2 else 11 - sum
++        sum = 1 if sum < 2 else 11 - sum
+ 
+         return str(sum)
+ 
+</pre><h3>Mutant 13221</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -62,7 +62,7 @@
+             sum += int(doc[i]) * self.weights_second[i]
+ 
+         sum = sum % 11
+-        sum = 0 if sum < 2 else 11 - sum
++        sum = 0 if sum <= 2 else 11 - sum
+ 
+         return str(sum)
+ 
+</pre><h3>Mutant 13222</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -62,7 +62,7 @@
+             sum += int(doc[i]) * self.weights_second[i]
+ 
+         sum = sum % 11
+-        sum = 0 if sum < 2 else 11 - sum
++        sum = 0 if sum < 3 else 11 - sum
+ 
+         return str(sum)
+ 
+</pre><h3>Mutant 13223</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -62,7 +62,7 @@
+             sum += int(doc[i]) * self.weights_second[i]
+ 
+         sum = sum % 11
+-        sum = 0 if sum < 2 else 11 - sum
++        sum = 0 if sum < 2 else 12 - sum
+ 
+         return str(sum)
+ 
+</pre><h3>Mutant 13224</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -62,7 +62,7 @@
+             sum += int(doc[i]) * self.weights_second[i]
+ 
+         sum = sum % 11
+-        sum = 0 if sum < 2 else 11 - sum
++        sum = 0 if sum < 2 else 11 + sum
+ 
+         return str(sum)
+ 
+</pre><h3>Mutant 13225</h3><pre>--- C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
++++ C:\Users\Isac - Agape\Documents\Projetos\validate-docbr\validate_docbr\CNPJ.py
+@@ -62,7 +62,7 @@
+             sum += int(doc[i]) * self.weights_second[i]
+ 
+         sum = sum % 11
+-        sum = 0 if sum < 2 else 11 - sum
++        sum = None
+ 
+         return str(sum)
+ 
+</pre></body></html>
